@@ -1,0 +1,25 @@
+{
+    "bundleName": "Package",
+    "dataPackets": [
+        {
+            "packetName": "SampleLevel",
+            "intValues": [
+                {
+                    "name": "collisions",
+                    "value": 0
+                }
+            ],
+            "floatValues": [
+                {
+                    "name": "score",
+                    "value": 5.0
+                },
+                {
+                    "name": "time",
+                    "value": 1.0
+                }
+            ],
+            "stringValues": []
+        }
+    ]
+}
