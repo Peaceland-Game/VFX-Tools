@@ -5,10 +5,10 @@ using UnityEngine;
 public class MovingSphere : MonoBehaviour
 {
     [SerializeField, Range(0f, 100f)]
-    float maxSpeed = 10f;
+    float maxSpeed = 10.0f;
 
     [SerializeField, Range(0f, 100f)]
-    float maxAcceleration = 1f;
+    float maxAcceleration = 1.0f, maxAirAcceleration = 1.0f;
 
     [SerializeField]
     float jumpHeight = 5.0f;
@@ -37,7 +37,7 @@ public class MovingSphere : MonoBehaviour
     {
         vel = rb.velocity;
         // Normal Movement
-        float maxChangeSpeed = maxAcceleration * Time.deltaTime;
+        float maxChangeSpeed = (onGround ? maxAcceleration : maxAirAcceleration) * Time.deltaTime;
 
         vel.x =
             Mathf.MoveTowards(vel.x, desiredVel.x, maxChangeSpeed);
@@ -60,7 +60,7 @@ public class MovingSphere : MonoBehaviour
 
     void Jump()
     {
-        // Change instant velocity not desired 
+        // Change displacement to a velocity 
         vel.y += Mathf.Sqrt(-2f * Physics.gravity.y * jumpHeight);
     }
 
