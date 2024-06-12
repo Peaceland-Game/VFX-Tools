@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "VFX/Ash.md",
+                "file": "VFX/Styled Fire.md",
                 "mode": "source",
                 "source": false
               }
@@ -29,8 +29,12 @@
             "id": "65b58f63731a7224",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "VFX/Particles.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -99,6 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "VFX/Styled Fire.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,6 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "VFX/Styled Fire.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +142,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "VFX/Styled Fire.md"
+              }
             }
           }
         ]
@@ -156,17 +164,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "65b58f63731a7224",
+  "active": "04ec3ffdebfb09ee",
   "lastOpenFiles": [
-    "Tools/Tools.md",
-    "Tools/ShaderPropertyEdit.md",
-    "VFX/Ash.md",
     "VFX/Particles.md",
     "VFX/Styled Fire.md",
+    "VFXFireStyled.mp4",
+    "Tools/BillboardLogic.md",
+    "Welcome.md",
+    "Tools/FileIO.md",
+    "VFX/Ash.md",
+    "Tools/Tools.md",
+    "Tools/ShaderPropertyEdit.md",
     "Tools/MushroomTool.md",
     "Tools/CharacterVisualController.md",
-    "Tools/BillboardLogic.md",
-    "Tools/FileIO.md",
     "Shaders/Shaders.md",
     "Shaders/Eye.md",
     "Shaders/TriplaneTextures.md",
@@ -179,7 +189,6 @@
     "Shaders/Gem.md",
     "Shaders/GoopyGem.md",
     "Shaders/Inverse.md",
-    "Welcome.md",
     "Tools",
     "VFX",
     "Shaders"
