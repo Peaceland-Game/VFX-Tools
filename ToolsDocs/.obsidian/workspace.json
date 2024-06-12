@@ -99,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "VFX/Ash.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,6 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "VFX/Ash.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +138,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "VFX/Ash.md"
+              }
             }
           }
         ]
@@ -156,29 +160,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "65b58f63731a7224",
+  "active": "04ec3ffdebfb09ee",
   "lastOpenFiles": [
-    "Tools/Tools.md",
-    "Tools/ShaderPropertyEdit.md",
-    "VFX/Ash.md",
     "VFX/Particles.md",
+    "VFX/Ash.md",
     "VFX/Styled Fire.md",
-    "Tools/MushroomTool.md",
-    "Tools/CharacterVisualController.md",
     "Tools/BillboardLogic.md",
+    "Tools/CharacterVisualController.md",
     "Tools/FileIO.md",
-    "Shaders/Shaders.md",
-    "Shaders/Eye.md",
+    "Tools/MushroomTool.md",
+    "Tools/ShaderPropertyEdit.md",
+    "Tools/Tools.md",
     "Shaders/TriplaneTextures.md",
-    "Shaders/Smoke.md",
-    "Shaders/RemoveSaturation.md",
-    "Shaders/Shine.md",
-    "Shaders/MossDirectional.md",
     "Shaders/Triplanar.md",
-    "Shaders/FireBase.md",
-    "Shaders/Gem.md",
-    "Shaders/GoopyGem.md",
+    "Shaders/Smoke.md",
+    "Shaders/Shine.md",
+    "Shaders/Shaders.md",
+    "Shaders/RemoveSaturation.md",
+    "Shaders/MossDirectional.md",
     "Shaders/Inverse.md",
+    "Shaders/GoopyGem.md",
+    "Shaders/Gem.md",
+    "Shaders/FireBase.md",
+    "Shaders/Eye.md",
+    "Media/VFXAshDemo.mp4",
+    "Media",
     "Welcome.md",
     "Tools",
     "VFX",
