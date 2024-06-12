@@ -101,7 +101,8 @@ public class CharacterVisualController : MonoBehaviour
         STUNNED,
         SAD,
         PLEASED,
-        JOYFUL
+        JOYFUL,
+        ANGRY
     }
 
     #region Debug
