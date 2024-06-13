@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/ShaderPropertyEdit.md",
+                "file": "Shaders/Eye.md",
                 "mode": "source",
                 "source": false
               }
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/ShaderPropertyEdit.md",
+                "file": "Shaders/Eye.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tools/ShaderPropertyEdit.md",
+                "file": "Shaders/Eye.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tools/ShaderPropertyEdit.md"
+                "file": "Shaders/Eye.md"
               }
             }
           }
@@ -175,27 +175,29 @@
   },
   "active": "37e3362a58ec69cb",
   "lastOpenFiles": [
+    "Tools/ShaderPropertyEdit.md",
+    "Shaders/Eye.md",
+    "Tools/CharacterVisualController.md",
+    "Shaders/FireBase.md",
+    "Shaders/Gem.md",
+    "Shaders/GoopyGem.md",
+    "Welcome.md",
+    "VFX/Ash.md",
+    "VFX/Styled Fire.md",
+    "VFX/Particles.md",
     "Tools/Tools.md",
     "Tools/MushroomTool.md",
-    "Tools/ShaderPropertyEdit.md",
     "Tools/BillboardLogic.md",
-    "Tools/CharacterVisualController.md",
     "ToolsShaderPropertyEdit.mp4",
-    "Shaders/GoopyGem.md",
     "Media/ToolsMushroom.mp4",
     "Tools/FileIO/DataStoreLoad.md",
     "Tools/FileIO/FileIO.md",
     "Media/DataStoreLoad.drawio.png",
     "Tools/FileIO",
     "Media/FileIO.drawio.png",
-    "Shaders/Eye.md",
     "Media/Pasted image 20240613102807.png",
     "Media/ToolsBillboard.mp4",
     "Media/ToolsCharacterVisualController.mp4",
-    "Welcome.md",
-    "VFX/Styled Fire.md",
-    "VFX/Particles.md",
-    "VFX/Ash.md",
     "Media/VFXAshDemo.mp4",
     "Media/VFXFireStyled.mp4",
     "Media",
@@ -206,8 +208,6 @@
     "Shaders/Shine.md",
     "Shaders/MossDirectional.md",
     "Shaders/Triplanar.md",
-    "Shaders/FireBase.md",
-    "Shaders/Gem.md",
     "Shaders/Inverse.md",
     "Tools",
     "VFX"

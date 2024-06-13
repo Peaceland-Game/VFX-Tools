@@ -15,7 +15,7 @@ public class ShaderPropertiesEditor : Editor
         {
             myScript.LoadProperties();
         }
-        if (GUILayout.Button("Overrid Properties Ranges"))
+        if (GUILayout.Button("Override Properties Ranges"))
         {
             myScript.OverrideRanges();
         }
