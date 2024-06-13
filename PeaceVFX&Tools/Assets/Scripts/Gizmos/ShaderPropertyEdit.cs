@@ -117,7 +117,7 @@ public class ShaderPropertyEdit : MonoBehaviour
                 break;
             
             ShaderProperties curr = generatedProperties[i];
-            LoadIntoMaterial(targetMaterials[i], curr); 
+            LoadIntoMaterial(targetMaterials[i], curr);
         }
     }
 
