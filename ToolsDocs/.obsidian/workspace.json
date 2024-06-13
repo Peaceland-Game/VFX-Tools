@@ -175,14 +175,16 @@
   },
   "active": "37e3362a58ec69cb",
   "lastOpenFiles": [
+    "Tools/Tools.md",
     "Tools/MushroomTool.md",
     "Tools/ShaderPropertyEdit.md",
-    "Media/ToolsMushroom.mp4",
+    "Tools/BillboardLogic.md",
     "Tools/CharacterVisualController.md",
+    "ToolsShaderPropertyEdit.mp4",
+    "Shaders/GoopyGem.md",
+    "Media/ToolsMushroom.mp4",
     "Tools/FileIO/DataStoreLoad.md",
     "Tools/FileIO/FileIO.md",
-    "Tools/BillboardLogic.md",
-    "Tools/Tools.md",
     "Media/DataStoreLoad.drawio.png",
     "Tools/FileIO",
     "Media/FileIO.drawio.png",
@@ -206,10 +208,8 @@
     "Shaders/Triplanar.md",
     "Shaders/FireBase.md",
     "Shaders/Gem.md",
-    "Shaders/GoopyGem.md",
     "Shaders/Inverse.md",
     "Tools",
-    "VFX",
-    "Shaders"
+    "VFX"
   ]
 }
