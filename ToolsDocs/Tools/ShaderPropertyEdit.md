@@ -1,0 +1,1 @@
+Allows for the quick randomization of parameters of the shader given to it which can then be applied to given materials. 
