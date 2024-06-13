@@ -10007,6 +10007,65 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!21 &296083876
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Eye (Instance) (Instance) (Instance) (Instance)
+  m_Shader: {fileID: -6465566751694194690, guid: b3890c52e26326f4690fa5e053bb84f3,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _CutoutRange: 0.13
+    - _EmissionMultiplier: 0.2
+    - _EyeWobbleDistance: 0.03
+    - _EyeWobbleSpeed: 0.04
+    - _OutlineSize: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Smoothness: 0
+    - _WobbleDistance: 0.02
+    - _WobbleSpeed: 5
+    - _canWobble: 0
+    m_Colors:
+    - _CutoutCenter: {r: 0.07, g: 0.12, b: 0, a: 0}
+    - _CutoutCenterOffset: {r: 1, g: 1, b: 1, a: 0}
+    - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _EyeColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
+    - _EyeSize: {r: 0.1, g: 0.09, b: 0, a: 0}
+    - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
+    - _OutlineSize: {r: 0.11, g: 0.095, b: 0, a: 0}
+    - _WobbleScale: {r: 1, g: 1.5, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &348258170
 GameObject:
   m_ObjectHideFlags: 0
@@ -40947,14 +41006,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde3f6cb027b47449be1329db0380952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!21 &1381841542
+--- !u!21 &1323912355
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Eye (Instance) (Instance)
+  m_Name: Eye (Instance) (Instance) (Instance) (Instance)
   m_Shader: {fileID: -6465566751694194690, guid: b3890c52e26326f4690fa5e053bb84f3,
     type: 3}
   m_Parent: {fileID: 0}
@@ -40998,64 +41057,7 @@ Material:
     - _canWobble: 0
     m_Colors:
     - _CutoutCenter: {r: 0.07, g: 0.12, b: 0, a: 0}
-    - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
-    - _EyeColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
-    - _EyeSize: {r: 0.1, g: 0.09, b: 0, a: 0}
-    - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
-    - _OutlineSize: {r: 0.11, g: 0.095, b: 0, a: 0}
-    - _WobbleScale: {r: 1, g: 1.5, b: 0, a: 0}
-  m_BuildTextureStacks: []
---- !u!21 &1540178331
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Eye (Instance) (Instance)
-  m_Shader: {fileID: -6465566751694194690, guid: b3890c52e26326f4690fa5e053bb84f3,
-    type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 2
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _CutoutRange: 0.13
-    - _EmissionMultiplier: 0.2
-    - _EyeWobbleDistance: 0.03
-    - _EyeWobbleSpeed: 0.04
-    - _OutlineSize: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    - _Smoothness: 0
-    - _WobbleDistance: 0.02
-    - _WobbleSpeed: 5
-    - _canWobble: 0
-    m_Colors:
-    - _CutoutCenter: {r: 0.07, g: 0.12, b: 0, a: 0}
+    - _CutoutCenterOffset: {r: -1, g: 1, b: 1, a: 0}
     - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
     - _EyeColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
     - _EyeSize: {r: 0.1, g: 0.09, b: 0, a: 0}
@@ -46056,7 +46058,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1381841542}
+      objectReference: {fileID: 296083876}
     - target: {fileID: 1440604796310629110, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -46235,37 +46237,37 @@ PrefabInstance:
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: eyeSettings.Array.data[6].eyeAttributes.vectors.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -46994,6 +46996,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[5].vector.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[5].vector.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[5].vector.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].colorName
       value: _EyeColor
       objectReference: {fileID: 0}
@@ -47066,6 +47083,21 @@ PrefabInstance:
         type: 3}
       propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[4].vector.y
       value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[5].vector.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[5].vector.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[5].vector.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -47149,6 +47181,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[5].vector.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[5].vector.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[5].vector.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].colorName
       value: _EyeColor
       objectReference: {fileID: 0}
@@ -47229,6 +47276,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[5].vector.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[5].vector.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[5].vector.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].colorName
       value: _EyeColor
       objectReference: {fileID: 0}
@@ -47304,6 +47366,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[5].vector.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[5].vector.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[5].vector.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].colorName
       value: _EyeColor
       objectReference: {fileID: 0}
@@ -47376,6 +47453,21 @@ PrefabInstance:
         type: 3}
       propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[4].vector.y
       value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[5].vector.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[5].vector.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[5].vector.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -47459,6 +47551,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: eyeSettings.Array.data[6].eyeAttributes.vectors.Array.data[5].vector.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[6].eyeAttributes.vectors.Array.data[5].vector.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[6].eyeAttributes.vectors.Array.data[5].vector.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[0].vectorName
       value: _EyeCenter
       objectReference: {fileID: 0}
@@ -47481,6 +47588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[4].vectorName
       value: _CutoutCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[5].vectorName
+      value: _CutoutCenterOffset
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -47509,6 +47621,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[5].vectorName
+      value: _CutoutCenterOffset
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[0].vectorName
       value: _EyeCenter
       objectReference: {fileID: 0}
@@ -47531,6 +47648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[4].vectorName
       value: _CutoutCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[5].vectorName
+      value: _CutoutCenterOffset
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -47559,6 +47681,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[5].vectorName
+      value: _CutoutOffsetCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[0].vectorName
       value: _EyeCenter
       objectReference: {fileID: 0}
@@ -47581,6 +47708,11 @@ PrefabInstance:
         type: 3}
       propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[4].vectorName
       value: _CutoutCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[5].vectorName
+      value: _CutoutCenterOffset
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -47609,6 +47741,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[5].vectorName
+      value: _CutoutOffsetCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: eyeSettings.Array.data[6].eyeAttributes.vectors.Array.data[0].vectorName
       value: _EyeCenter
       objectReference: {fileID: 0}
@@ -47632,11 +47769,16 @@ PrefabInstance:
       propertyPath: eyeSettings.Array.data[6].eyeAttributes.vectors.Array.data[4].vectorName
       value: _CutoutCenter
       objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[6].eyeAttributes.vectors.Array.data[5].vectorName
+      value: _CutoutCenterOffset
+      objectReference: {fileID: 0}
     - target: {fileID: 7333176607482636394, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1540178331}
+      objectReference: {fileID: 1323912355}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -48473,12 +48615,12 @@ PrefabInstance:
     - target: {fileID: 6865110348543519408, guid: efc6d989ecf1b1448b54b3317d87b1dc,
         type: 3}
       propertyPath: m_Range
-      value: 2.604847
+      value: 2.4076452
       objectReference: {fileID: 0}
     - target: {fileID: 6865110348543519408, guid: efc6d989ecf1b1448b54b3317d87b1dc,
         type: 3}
       propertyPath: m_Intensity
-      value: 0.3930102
+      value: 0.406157
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
