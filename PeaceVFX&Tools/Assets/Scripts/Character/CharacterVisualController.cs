@@ -50,11 +50,32 @@ public class CharacterVisualController : MonoBehaviour
 
     public void UpdateEyes()
     {
+        /*
         // Load new settings into each eye renderer's materials 
         foreach (Renderer eyeRenderer in eyes)
         {
             EyeSettings settings = FindEyeSettings(emotionalState);
             settings?.LoadAttributesIntoEye(eyeRenderer, eyeRenderer.material.shader);
+        }
+        */
+
+        for (int i = 0; i < eyes.Count; i++)
+        {
+            // Determining a stupid, arbitrary convention:
+            // - even numbered eyes have their cutout center X value multiplied by -1,
+            // - odd numbered eyes have their X value multiplied by 1
+            Vector3 offset;
+            if (i % 2 == 0)
+            {
+                offset = new Vector3(-1, 1, 1);
+            }
+            else
+            {
+                offset = new Vector3(1, 1, 1);
+            }
+
+            EyeSettings settings = FindEyeSettings(emotionalState);
+            settings?.LoadAttributesIntoEye(eyes[i], eyes[i].material.shader, offset);
         }
     }
 
@@ -84,12 +105,16 @@ public class CharacterVisualController : MonoBehaviour
         [SerializeField] public EmotionalState state;
         [SerializeField] ShaderPropertyEdit.ShaderProperties eyeAttributes;
 
-        public void LoadAttributesIntoEye(Renderer eyeRenderer, Shader shader)
+        public void LoadAttributesIntoEye(Renderer eyeRenderer, Shader shader, Vector3 cutoutOffset)
         {
-            // Init nameAndTypeInit
-
+            // Call the generic methods for loading shader properties for the material
             ShaderPropertyEdit.GeneratePropertyHelpers(eyeAttributes, shader);
             ShaderPropertyEdit.LoadIntoMaterial(Application.isEditor ? eyeRenderer.sharedMaterial : eyeRenderer.material, eyeAttributes);
+
+            // Update a specific property that the eyes have that allow the
+            // cutout portion to be properly mirrored for left / right eyes.
+            // Narai, I'm deeply sorry for defiling your beautiful tool.
+            eyeRenderer.material.SetVector("_CutoutCenterOffset", cutoutOffset);
         }
     }
 
@@ -101,7 +126,8 @@ public class CharacterVisualController : MonoBehaviour
         STUNNED,
         SAD,
         PLEASED,
-        JOYFUL
+        JOYFUL,
+        ANGRY
     }
 
     #region Debug
