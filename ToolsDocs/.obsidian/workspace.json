@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "VFX/Memory.md",
+                "file": "Shaders/Gem.md",
                 "mode": "source",
                 "source": false
               }
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "VFX/Memory.md",
+                "file": "Shaders/Gem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "VFX/Memory.md",
+                "file": "Shaders/Gem.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "VFX/Memory.md"
+                "file": "Shaders/Gem.md"
               }
             }
           }
@@ -175,19 +175,19 @@
   },
   "active": "37e3362a58ec69cb",
   "lastOpenFiles": [
+    "Tools/CharacterVisualController.md",
+    "Shaders/FireBase.md",
+    "VFX/Memory.md",
     "VFX/Particles.md",
     "VFX/Styled Fire.md",
-    "VFX/Memory.md",
     "Tools/MushroomTool.md",
     "Tools/ShaderPropertyEdit.md",
     "Tools/Tools.md",
     "Media/Triplanar.png",
     "Media/VFXMemory.mp4",
     "Welcome.md",
-    "Tools/CharacterVisualController.md",
     "Shaders/TriplaneTextures.md",
     "Shaders/Triplanar.md",
-    "Shaders/FireBase.md",
     "Shaders/Smoke.md",
     "Pasted image 20240617120549.png",
     "Media/Smoke.png",
