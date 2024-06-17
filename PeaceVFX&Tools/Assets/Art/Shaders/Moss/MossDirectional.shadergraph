@@ -37,9 +37,6 @@
             "m_Id": "44769d0eb8cc48fea7a42736e8dc2e0b"
         },
         {
-            "m_Id": "60e5302535e948f1a039b48dcbf40acd"
-        },
-        {
             "m_Id": "54d11ea9bb354b3ab74d841af5533c5d"
         },
         {
@@ -2160,9 +2157,6 @@
         },
         {
             "m_Id": "44769d0eb8cc48fea7a42736e8dc2e0b"
-        },
-        {
-            "m_Id": "60e5302535e948f1a039b48dcbf40acd"
         }
     ]
 }
@@ -4043,34 +4037,6 @@
     },
     "m_Labels": [],
     "m_Space": 0
-}
-
-{
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector2ShaderProperty",
-    "m_ObjectId": "60e5302535e948f1a039b48dcbf40acd",
-    "m_Guid": {
-        "m_GuidSerialized": "cb3b8ea9-7e0b-41ff-9690-a6a45d3e8deb"
-    },
-    "m_Name": "MossRemap",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "MossRemap",
-    "m_DefaultReferenceName": "_MossRemap",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "x": 0.0,
-        "y": 1.0,
-        "z": 0.0,
-        "w": 0.0
-    }
 }
 
 {

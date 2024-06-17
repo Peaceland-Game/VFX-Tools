@@ -1,0 +1,1 @@
+Simple shader that has only the multiply state for its blending. Helpful for quick prototyping of particles and other effects. 

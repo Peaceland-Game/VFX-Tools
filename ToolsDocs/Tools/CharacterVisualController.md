@@ -6,5 +6,5 @@ In eye settings we are able to set the shader attributes of the eyes connected t
 
 The state of the element relates to the emotional state that these attributes would be related to. There can be multiple elements of the same state but when the character chooses that emotional state, only the top most element in the list to update the material with. 
 
-![[Pasted image 20240613102807.png]]
+![[EyeAttributes.png]]
 
