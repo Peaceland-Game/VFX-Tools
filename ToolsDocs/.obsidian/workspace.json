@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/Tools.md",
+                "file": "Welcome.md",
                 "mode": "source",
                 "source": false
               }
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/Tools.md",
+                "file": "Welcome.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tools/Tools.md",
+                "file": "Welcome.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tools/Tools.md"
+                "file": "Welcome.md"
               }
             }
           }
@@ -175,6 +175,7 @@
   },
   "active": "37e3362a58ec69cb",
   "lastOpenFiles": [
+    "Tools/Tools.md",
     "Tools/ShaderPropertyEdit.md",
     "Tools/MushroomTool.md",
     "Tools/CharacterVisualController.md",
@@ -212,7 +213,6 @@
     "Tools/BillboardLogic.md",
     "Tools/FileIO/FileIO.md",
     "Welcome.md",
-    "Tools/Tools.md",
     "ToolsShaderPropertyEdit.mp4",
     "Media/ToolsMushroom.mp4",
     "Tools/FileIO",
