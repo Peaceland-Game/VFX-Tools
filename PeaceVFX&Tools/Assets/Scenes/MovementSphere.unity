@@ -781,9 +781,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962d348bba4c22e42b10416c08bec00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
+  maxSpeed: 5.9
   maxAcceleration: 6.8
-  jumpHeight: 2
+  maxAirAcceleration: 1
+  jumpHeight: 1
 --- !u!54 &988707089
 Rigidbody:
   m_ObjectHideFlags: 0
