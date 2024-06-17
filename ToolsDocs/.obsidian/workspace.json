@@ -24,7 +24,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome.md",
+                "file": "VFX/Memory.md",
                 "mode": "source",
                 "source": false
               }
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Welcome.md",
+                "file": "VFX/Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "VFX/Memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md"
+                "file": "VFX/Memory.md"
               }
             }
           }
@@ -175,14 +175,19 @@
   },
   "active": "37e3362a58ec69cb",
   "lastOpenFiles": [
-    "Tools/Tools.md",
-    "Tools/ShaderPropertyEdit.md",
+    "VFX/Particles.md",
+    "VFX/Styled Fire.md",
+    "VFX/Memory.md",
     "Tools/MushroomTool.md",
+    "Tools/ShaderPropertyEdit.md",
+    "Tools/Tools.md",
+    "Media/Triplanar.png",
+    "Media/VFXMemory.mp4",
+    "Welcome.md",
     "Tools/CharacterVisualController.md",
     "Shaders/TriplaneTextures.md",
     "Shaders/Triplanar.md",
     "Shaders/FireBase.md",
-    "Triplanar.png",
     "Shaders/Smoke.md",
     "Pasted image 20240617120549.png",
     "Media/Smoke.png",
@@ -200,8 +205,6 @@
     "Shaders/Gem.md",
     "Shaders/Eye.md",
     "VFX/Ash.md",
-    "VFX/Styled Fire.md",
-    "VFX/Particles.md",
     "Tools/FileIO/DataStoreLoad.md",
     "Shaders/Inverse.md",
     "Media/ShaderGoopyGem.mp4",
@@ -212,11 +215,9 @@
     "Media/ToolsBillboard.mp4",
     "Tools/BillboardLogic.md",
     "Tools/FileIO/FileIO.md",
-    "Welcome.md",
     "ToolsShaderPropertyEdit.mp4",
     "Media/ToolsMushroom.mp4",
     "Tools/FileIO",
-    "Media",
-    "Tools"
+    "Media"
   ]
 }
