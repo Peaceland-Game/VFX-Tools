@@ -5,6 +5,7 @@ https://docs.unity3d.com/Packages/com.unity.shadergraph@7.1/manual/Simple-Noise-
 William Duprey
 6/19/24
 Simple Noise 3D
+INCOMPLETE
 */
 
 inline float randomValue(float3 uv)
