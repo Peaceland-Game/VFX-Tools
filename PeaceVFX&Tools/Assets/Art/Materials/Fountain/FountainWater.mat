@@ -83,7 +83,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _AlphaScale: 7.8
+    - _AlphaScale: 9.79
     - _AlphaToMask: 0
     - _AnimSpeed: 1.5
     - _Blend: 0
