@@ -9902,66 +9902,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!21 &125576086
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Eye (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
-  m_Shader: {fileID: -6465566751694194690, guid: b3890c52e26326f4690fa5e053bb84f3,
-    type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 2
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _CutoutRange: 0
-    - _EmissionMultiplier: 0.2
-    - _EyeWobbleDistance: 0.03
-    - _EyeWobbleSpeed: 0.04
-    - _OutlineSize: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    - _Smoothness: 0
-    - _WobbleDistance: 0.1
-    - _WobbleSpeed: 0.5
-    - _canWobble: 0
-    m_Colors:
-    - _CutoutCenter: {r: -0.01, g: -0.09, b: 0, a: 0}
-    - _CutoutCenterOffset: {r: 1, g: 1, b: 1, a: 0}
-    - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
-    - _EyeColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
-    - _EyeSize: {r: 0.08, g: 0.11, b: 0, a: 0}
-    - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
-    - _OutlineColorDark: {r: 0.29608527, g: 0.30188674, b: 0.24967366, a: 1}
-    - _OutlineSize: {r: 0.09, g: 0.12, b: 0, a: 0}
-    - _WobbleScale: {r: 0.1, g: 0.5, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &220992291
 GameObject:
   m_ObjectHideFlags: 0
@@ -15683,6 +15623,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &520395718
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Eye (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
+    (Instance)
+  m_Shader: {fileID: -6465566751694194690, guid: b3890c52e26326f4690fa5e053bb84f3,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _CutoutRange: 0
+    - _EmissionMultiplier: 0.2
+    - _EyeWobbleDistance: 0.03
+    - _EyeWobbleSpeed: 0.04
+    - _OutlineSize: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Smoothness: 0
+    - _WobbleDistance: 0.1
+    - _WobbleSpeed: 0.5
+    - _canWobble: 0
+    m_Colors:
+    - _CutoutCenter: {r: -0.01, g: -0.09, b: 0, a: 0}
+    - _CutoutCenterOffset: {r: 1, g: 1, b: 1, a: 0}
+    - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _EyeColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
+    - _EyeSize: {r: 0.08, g: 0.11, b: 0, a: 0}
+    - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
+    - _OutlineColorDark: {r: 0.29608527, g: 0.30188674, b: 0.24967366, a: 1}
+    - _OutlineSize: {r: 0.09, g: 0.12, b: 0, a: 0}
+    - _WobbleScale: {r: 0.1, g: 0.5, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1001 &611409747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25558,6 +25559,258 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &753674984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 753674989}
+  - component: {fileID: 753674988}
+  - component: {fileID: 753674987}
+  - component: {fileID: 753674986}
+  - component: {fileID: 753674985}
+  m_Layer: 0
+  m_Name: TempShaderPropertyEditor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &753674985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753674984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128d476a6b5fae64a95744b3af4ddd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: -6465566751694194690, guid: 2d53978550865a94e8303560a35b8565, type: 3}
+  targetMaterials: []
+  propertiesRanges:
+    colors:
+    - colorName: _MouthColor
+      gradient:
+        serializedVersion: 2
+        key0: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 1}
+        key2: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 0, g: 0, b: 0, a: 0}
+        key4: {r: 0, g: 0, b: 0, a: 0}
+        key5: {r: 0, g: 0, b: 0, a: 0}
+        key6: {r: 0, g: 0, b: 0, a: 0}
+        key7: {r: 0, g: 0, b: 0, a: 0}
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_Mode: 0
+        m_ColorSpace: -1
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+    - colorName: _OutlineColor
+      gradient:
+        serializedVersion: 2
+        key0: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 1}
+        key2: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 0, g: 0, b: 0, a: 0}
+        key4: {r: 0, g: 0, b: 0, a: 0}
+        key5: {r: 0, g: 0, b: 0, a: 0}
+        key6: {r: 0, g: 0, b: 0, a: 0}
+        key7: {r: 0, g: 0, b: 0, a: 0}
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_Mode: 0
+        m_ColorSpace: -1
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+    vectors:
+    - vectorName: _MouthBaseSize
+      minRange: {x: 0, y: 0, z: 0}
+      maxRange: {x: 0, y: 0, z: 0}
+    - vectorName: _OutlineThickness
+      minRange: {x: 0, y: 0, z: 0}
+      maxRange: {x: 0, y: 0, z: 0}
+    - vectorName: _MouthCenter
+      minRange: {x: 0, y: 0, z: 0}
+      maxRange: {x: 0, y: 0, z: 0}
+    - vectorName: _WobbleScale
+      minRange: {x: 0, y: 0, z: 0}
+      maxRange: {x: 0, y: 0, z: 0}
+    - vectorName: _TalkScale
+      minRange: {x: 0, y: 0, z: 0}
+      maxRange: {x: 0, y: 0, z: 0}
+    - vectorName: _TalkXRange
+      minRange: {x: 0, y: 0, z: 0}
+      maxRange: {x: 0, y: 0, z: 0}
+    - vectorName: _TalkYRange
+      minRange: {x: 0, y: 0, z: 0}
+      maxRange: {x: 0, y: 0, z: 0}
+    floats:
+    - floatName: _EmissionMultiplier
+      range: {x: 0, y: 0}
+    - floatName: _WobbleDistance
+      range: {x: 0, y: 0}
+    - floatName: _WobbleSpeed
+      range: {x: 0, y: 0}
+    - floatName: _TalkSpeed
+      range: {x: 0, y: 0}
+    ranges: []
+    texs: []
+    ints: []
+  numToGenerate: 1
+  generatedProperties:
+  - colors:
+    - colorName: _MouthColor
+      color: {r: 1, g: 1, b: 1, a: 1}
+    - colorName: _OutlineColor
+      color: {r: 1, g: 1, b: 1, a: 1}
+    vectors:
+    - vectorName: _MouthBaseSize
+      vector: {x: 0, y: 0, z: 0}
+    - vectorName: _OutlineThickness
+      vector: {x: 0, y: 0, z: 0}
+    - vectorName: _MouthCenter
+      vector: {x: 0, y: 0, z: 0}
+    - vectorName: _WobbleScale
+      vector: {x: 0, y: 0, z: 0}
+    - vectorName: _TalkScale
+      vector: {x: 0, y: 0, z: 0}
+    - vectorName: _TalkXRange
+      vector: {x: 0, y: 0, z: 0}
+    - vectorName: _TalkYRange
+      vector: {x: 0, y: 0, z: 0}
+    floats:
+    - floatName: _EmissionMultiplier
+      value: 0
+    - floatName: _WobbleDistance
+      value: 0
+    - floatName: _WobbleSpeed
+      value: 0
+    - floatName: _TalkSpeed
+      value: 0
+    ranges: []
+    texs: []
+    ints: []
+--- !u!65 &753674986
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753674984}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &753674987
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753674984}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &753674988
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753674984}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &753674989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753674984}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.0613196, y: 2.243, z: 0.06287861}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832179218
 GameObject:
   m_ObjectHideFlags: 0
@@ -25819,6 +26072,67 @@ MonoBehaviour:
   m_MoveSpeed: 10
   m_MoveSpeedIncrement: 2.5
   m_Turbo: 10
+--- !u!21 &845573322
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Eye (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
+    (Instance)
+  m_Shader: {fileID: -6465566751694194690, guid: b3890c52e26326f4690fa5e053bb84f3,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _CutoutRange: 0
+    - _EmissionMultiplier: 0.2
+    - _EyeWobbleDistance: 0.03
+    - _EyeWobbleSpeed: 0.04
+    - _OutlineSize: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Smoothness: 0
+    - _WobbleDistance: 0.1
+    - _WobbleSpeed: 0.5
+    - _canWobble: 0
+    m_Colors:
+    - _CutoutCenter: {r: -0.01, g: -0.09, b: 0, a: 0}
+    - _CutoutCenterOffset: {r: -1, g: 1, b: 1, a: 0}
+    - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _EyeColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
+    - _EyeSize: {r: 0.08, g: 0.11, b: 0, a: 0}
+    - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
+    - _OutlineColorDark: {r: 0.29608527, g: 0.30188674, b: 0.24967366, a: 1}
+    - _OutlineSize: {r: 0.09, g: 0.12, b: 0, a: 0}
+    - _WobbleScale: {r: 0.1, g: 0.5, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &884738630
 GameObject:
   m_ObjectHideFlags: 0
@@ -36027,6 +36341,61 @@ MonoBehaviour:
   DisAngleOffsetRange: {x: 1, y: 20}
   DisCellDensityRange: {x: 1, y: 5}
   DisTimeScaleRange: {x: 0.1, y: 0.25}
+--- !u!21 &1176044303
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Material/Mouth (Instance)
+  m_Shader: {fileID: -6465566751694194690, guid: 2d53978550865a94e8303560a35b8565,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _EmissionMultiplier: 0.2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _TalkSpeed: 0
+    - _WobbleDistance: 0
+    - _WobbleSpeed: 0.2
+    m_Colors:
+    - _MouthBaseSize: {r: 0.3, g: 0.01, b: 0, a: 0}
+    - _MouthCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _MouthColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
+    - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
+    - _OutlineThickness: {r: 0.03, g: 0.03, b: 0, a: 0}
+    - _TalkScale: {r: 10, g: 10, b: 0, a: 0}
+    - _TalkXRange: {r: 0.5, g: 1, b: 0, a: 0}
+    - _TalkYRange: {r: 0.1, g: 3, b: 0, a: 0}
+    - _WobbleScale: {r: 10, g: 10, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1221390548
 GameObject:
   m_ObjectHideFlags: 0
@@ -46000,7 +46369,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 125576086}
+      objectReference: {fileID: 520395718}
     - target: {fileID: 1440604796310629110, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -46068,13 +46437,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: isTalking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: emotionalState
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: mouths.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouths.Array.data[0]
+      value: 
+      objectReference: {fileID: 1694553182}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: eyeSettings.Array.size
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -46210,6 +46599,16 @@ PrefabInstance:
         type: 3}
       propertyPath: eyeSettings.Array.data[6].eyeAttributes.vectors.Array.size
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.colors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.floats.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -46450,6 +46849,11 @@ PrefabInstance:
         type: 3}
       propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.size
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -47508,6 +47912,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.floats.Array.data[0].value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.floats.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.floats.Array.data[2].value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.floats.Array.data[3].value
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[0].vectorName
       value: _EyeCenter
       objectReference: {fileID: 0}
@@ -47716,11 +48140,176 @@ PrefabInstance:
       propertyPath: eyeSettings.Array.data[6].eyeAttributes.vectors.Array.data[5].vectorName
       value: _CutoutCenterOffset
       objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.colors.Array.data[0].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.colors.Array.data[0].color.b
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.colors.Array.data[0].color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.colors.Array.data[0].color.r
+      value: 0.6627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.colors.Array.data[1].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.colors.Array.data[1].color.b
+      value: 0.34901962
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.colors.Array.data[1].color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.colors.Array.data[1].color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.colors.Array.data[0].colorName
+      value: _MouthColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.colors.Array.data[1].colorName
+      value: _OutlineColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.floats.Array.data[0].floatName
+      value: _EmissionMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.floats.Array.data[1].floatName
+      value: _WobbleDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.floats.Array.data[2].floatName
+      value: _WobbleSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.floats.Array.data[3].floatName
+      value: _TalkSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[0].vector.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[0].vector.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[1].vector.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[1].vector.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[3].vector.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[3].vector.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[4].vector.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[4].vector.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[5].vector.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[5].vector.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[6].vector.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[6].vector.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[0].vectorName
+      value: _MouthBaseSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[1].vectorName
+      value: _OutlineThickness
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[2].vectorName
+      value: _MouthCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[3].vectorName
+      value: _WobbleScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[4].vectorName
+      value: _TalkScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[5].vectorName
+      value: _TalkXRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[6].vectorName
+      value: _TalkYRange
+      objectReference: {fileID: 0}
     - target: {fileID: 7333176607482636394, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1966472533}
+      objectReference: {fileID: 845573322}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -48024,7 +48613,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 2d53978550865a94e8303560a35b8565, type: 3}
+  - {fileID: 1176044303}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48397,66 +48986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc6563a2aa843a34caa875d7abb862e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!21 &1966472533
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Eye (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
-  m_Shader: {fileID: -6465566751694194690, guid: b3890c52e26326f4690fa5e053bb84f3,
-    type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 2
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _CutoutRange: 0
-    - _EmissionMultiplier: 0.2
-    - _EyeWobbleDistance: 0.03
-    - _EyeWobbleSpeed: 0.04
-    - _OutlineSize: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    - _Smoothness: 0
-    - _WobbleDistance: 0.1
-    - _WobbleSpeed: 0.5
-    - _canWobble: 0
-    m_Colors:
-    - _CutoutCenter: {r: -0.01, g: -0.09, b: 0, a: 0}
-    - _CutoutCenterOffset: {r: -1, g: 1, b: 1, a: 0}
-    - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
-    - _EyeColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
-    - _EyeSize: {r: 0.08, g: 0.11, b: 0, a: 0}
-    - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
-    - _OutlineColorDark: {r: 0.29608527, g: 0.30188674, b: 0.24967366, a: 1}
-    - _OutlineSize: {r: 0.09, g: 0.12, b: 0, a: 0}
-    - _WobbleScale: {r: 0.1, g: 0.5, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &2044285997
 GameObject:
   m_ObjectHideFlags: 0
@@ -48733,12 +49262,12 @@ PrefabInstance:
     - target: {fileID: 6865110348543519408, guid: efc6d989ecf1b1448b54b3317d87b1dc,
         type: 3}
       propertyPath: m_Range
-      value: 2.984475
+      value: 3.1199486
       objectReference: {fileID: 0}
     - target: {fileID: 6865110348543519408, guid: efc6d989ecf1b1448b54b3317d87b1dc,
         type: 3}
       propertyPath: m_Intensity
-      value: 0.36770168
+      value: 0.3586701
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

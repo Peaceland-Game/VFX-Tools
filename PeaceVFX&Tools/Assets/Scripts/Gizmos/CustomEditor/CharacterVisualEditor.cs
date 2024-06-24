@@ -15,5 +15,9 @@ public class CharacterVisualEditor : Editor
         {
             myScript.UpdateEyes();
         } 
+        if(GUILayout.Button("Update Mouth"))
+        {
+            myScript.UpdateMouth();
+        }
     }
 }

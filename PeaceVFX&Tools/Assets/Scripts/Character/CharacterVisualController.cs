@@ -17,6 +17,11 @@ public class CharacterVisualController : MonoBehaviour
     [SerializeField] List<Renderer> eyes;
     [SerializeField] List<EyeSettings> eyeSettings;
 
+    [Header("Mouth")]
+    [SerializeField] bool isTalking;
+    [SerializeField] List<Renderer> mouths;
+    [SerializeField] List<MouthSettings> mouthSettings;
+
     private Material[] materials;
 
     private int activeCoroutines = 0;
@@ -33,6 +38,7 @@ public class CharacterVisualController : MonoBehaviour
     {
         DebugLogic();
         EyeLogic();
+        MouthLogic();
     }
 
     public void EyeLogic()
@@ -45,7 +51,18 @@ public class CharacterVisualController : MonoBehaviour
         holdState = emotionalState;
 
         UpdateEyes();
+    }
 
+    public void MouthLogic()
+    {
+        if(emotionalState == holdState)
+        {
+            return;
+        }
+
+        holdState = emotionalState;
+
+        UpdateMouth();
     }
 
     public void UpdateEyes()
@@ -80,6 +97,18 @@ public class CharacterVisualController : MonoBehaviour
     }
 
     /// <summary>
+    /// Updates the mouth
+    /// </summary>
+    public void UpdateMouth()
+    {
+        for(int i = 0; i < mouths.Count; i++)
+        {
+            MouthSettings settings = FindMouthSettings(emotionalState);
+            settings?.LoadAttributesIntoMouth(mouths[i], mouths[i].material.shader, isTalking);
+        }
+    }
+
+    /// <summary>
     /// Searches for the first 
     /// </summary>
     /// <param name="state"></param>
@@ -96,6 +125,26 @@ public class CharacterVisualController : MonoBehaviour
 
         // Eye not found 
         Debug.LogWarning("Eye state " + state + " not found");
+        return null;
+    }
+
+    /// <summary>
+    /// Copy of FindEyeSettings, but for the mouth.
+    /// </summary>
+    /// <param name="state"></param>
+    /// <returns></returns>
+    private MouthSettings FindMouthSettings(EmotionalState state)
+    {
+        foreach(MouthSettings mouth in mouthSettings)
+        {
+            if(mouth.state == state)
+            {
+                return mouth;
+            }
+        }
+
+        // Mouth not found
+        Debug.LogWarning("Mouth state " + state + " not found");
         return null;
     }
 
@@ -118,6 +167,32 @@ public class CharacterVisualController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Basically a copy of EyeSettings, that allows for the mouth to be updated separately.
+    /// </summary>
+    [Serializable]
+    private class MouthSettings
+    {
+        [SerializeField] public EmotionalState state;
+        [SerializeField] ShaderPropertyEdit.ShaderProperties mouthAttributes;
+
+        public void LoadAttributesIntoMouth(Renderer mouthRenderer, Shader shader, bool isTalking)
+        {
+            ShaderPropertyEdit.GeneratePropertyHelpers(mouthAttributes, shader);
+            ShaderPropertyEdit.LoadIntoMaterial(Application.isEditor ? mouthRenderer.sharedMaterial : mouthRenderer.material, mouthAttributes);
+
+            // If isTalking is false,
+            //      Set talk speed to 0 to prevent the mouth scale from changing
+            //      Set MouthBaseSize to SilentMouthSize (allowing for different
+            //        emotional states to have different silent mouth sizes)
+            if (!isTalking)
+            {
+                mouthRenderer.material.SetFloat("_TalkSpeed", 0);
+                mouthRenderer.material.SetVector("_MouthBaseSize", 
+                    mouthRenderer.material.GetVector("_SilentMouthSize"));
+            }
+        }
+    }
 
     private enum EmotionalState
     {
