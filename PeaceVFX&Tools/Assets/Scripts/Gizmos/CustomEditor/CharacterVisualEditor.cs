@@ -11,9 +11,19 @@ public class CharacterVisualEditor : Editor
         base.OnInspectorGUI();
 
         CharacterVisualController myScript = (CharacterVisualController)target;
+        if(GUILayout.Button("Update All"))
+        {
+            myScript.UpdateEyes();
+            myScript.UpdateMouth();
+        }
+        // TODO: Figure out how to add a folder / dropdown thing for these buttons
         if (GUILayout.Button("Update Eyes"))
         {
             myScript.UpdateEyes();
         } 
+        if(GUILayout.Button("Update Mouth"))
+        {
+            myScript.UpdateMouth();
+        }
     }
 }

@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Peaceland Character Visual Controller
+ * Created by Narai Risser
+ * Mouth functionality added by William Duprey
+ * Last updated 6/24/24
+ */
+
 public class CharacterVisualController : MonoBehaviour
 {
     [Header("Debug")]
@@ -16,6 +23,11 @@ public class CharacterVisualController : MonoBehaviour
     [Header("Eyes")]
     [SerializeField] List<Renderer> eyes;
     [SerializeField] List<EyeSettings> eyeSettings;
+
+    [Header("Mouth")]
+    [SerializeField] bool isTalking;
+    [SerializeField] List<Renderer> mouths;
+    [SerializeField] List<MouthSettings> mouthSettings;
 
     private Material[] materials;
 
@@ -33,6 +45,7 @@ public class CharacterVisualController : MonoBehaviour
     {
         DebugLogic();
         EyeLogic();
+        MouthLogic();
     }
 
     public void EyeLogic()
@@ -45,20 +58,22 @@ public class CharacterVisualController : MonoBehaviour
         holdState = emotionalState;
 
         UpdateEyes();
+    }
 
+    public void MouthLogic()
+    {
+        if(emotionalState == holdState)
+        {
+            return;
+        }
+
+        holdState = emotionalState;
+
+        UpdateMouth();
     }
 
     public void UpdateEyes()
     {
-        /*
-        // Load new settings into each eye renderer's materials 
-        foreach (Renderer eyeRenderer in eyes)
-        {
-            EyeSettings settings = FindEyeSettings(emotionalState);
-            settings?.LoadAttributesIntoEye(eyeRenderer, eyeRenderer.material.shader);
-        }
-        */
-
         for (int i = 0; i < eyes.Count; i++)
         {
             // Determining a stupid, arbitrary convention:
@@ -76,6 +91,18 @@ public class CharacterVisualController : MonoBehaviour
 
             EyeSettings settings = FindEyeSettings(emotionalState);
             settings?.LoadAttributesIntoEye(eyes[i], eyes[i].material.shader, offset);
+        }
+    }
+
+    /// <summary>
+    /// Updates the mouth
+    /// </summary>
+    public void UpdateMouth()
+    {
+        for(int i = 0; i < mouths.Count; i++)
+        {
+            MouthSettings settings = FindMouthSettings(emotionalState);
+            settings?.LoadAttributesIntoMouth(mouths[i], mouths[i].material.shader, isTalking);
         }
     }
 
@@ -99,6 +126,26 @@ public class CharacterVisualController : MonoBehaviour
         return null;
     }
 
+    /// <summary>
+    /// Copy of FindEyeSettings, but for the mouth.
+    /// </summary>
+    /// <param name="state"></param>
+    /// <returns></returns>
+    private MouthSettings FindMouthSettings(EmotionalState state)
+    {
+        foreach(MouthSettings mouth in mouthSettings)
+        {
+            if(mouth.state == state)
+            {
+                return mouth;
+            }
+        }
+
+        // Mouth not found
+        Debug.LogWarning("Mouth state " + state + " not found");
+        return null;
+    }
+
     [Serializable]
     private class EyeSettings
     {
@@ -118,6 +165,32 @@ public class CharacterVisualController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Basically a copy of EyeSettings, that allows for the mouth to be updated separately.
+    /// </summary>
+    [Serializable]
+    private class MouthSettings
+    {
+        [SerializeField] public EmotionalState state;
+        [SerializeField] ShaderPropertyEdit.ShaderProperties mouthAttributes;
+
+        public void LoadAttributesIntoMouth(Renderer mouthRenderer, Shader shader, bool isTalking)
+        {
+            ShaderPropertyEdit.GeneratePropertyHelpers(mouthAttributes, shader);
+            ShaderPropertyEdit.LoadIntoMaterial(Application.isEditor ? mouthRenderer.sharedMaterial : mouthRenderer.material, mouthAttributes);
+
+            // If isTalking is false,
+            //      Set talk speed to 0 to prevent the mouth scale from changing
+            //      Set MouthBaseSize to SilentMouthSize (allowing for different
+            //        emotional states to have different silent mouth sizes)
+            if (!isTalking)
+            {
+                mouthRenderer.material.SetFloat("_TalkSpeed", 0);
+                mouthRenderer.material.SetVector("_MouthBaseSize", 
+                    mouthRenderer.material.GetVector("_SilentMouthSize"));
+            }
+        }
+    }
 
     private enum EmotionalState
     {
