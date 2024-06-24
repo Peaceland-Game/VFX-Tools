@@ -3,6 +3,7 @@ Most materials do not require an in-depth explanation in order to be used but ot
 ShaderGraph
 - [[GoopyGem]]
 - [[Eye]]
+- [[Mouth]]
 - [[Inverse]]
 - [[Shine]]
 - [[Gem]]
@@ -14,3 +15,4 @@ ShaderGraph
 SubShader
 - [[RemoveSaturation]]
 - [[TriplaneTextures]]
+- [[Voronoi 3D Noise]]
