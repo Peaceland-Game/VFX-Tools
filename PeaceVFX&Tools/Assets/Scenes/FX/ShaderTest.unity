@@ -25661,6 +25661,9 @@ MonoBehaviour:
     - vectorName: _MouthBaseSize
       minRange: {x: 0, y: 0, z: 0}
       maxRange: {x: 0, y: 0, z: 0}
+    - vectorName: _SilentMouthSize
+      minRange: {x: 0, y: 0, z: 0}
+      maxRange: {x: 0, y: 0, z: 0}
     - vectorName: _OutlineThickness
       minRange: {x: 0, y: 0, z: 0}
       maxRange: {x: 0, y: 0, z: 0}
@@ -25700,6 +25703,8 @@ MonoBehaviour:
       color: {r: 1, g: 1, b: 1, a: 1}
     vectors:
     - vectorName: _MouthBaseSize
+      vector: {x: 0, y: 0, z: 0}
+    - vectorName: _SilentMouthSize
       vector: {x: 0, y: 0, z: 0}
     - vectorName: _OutlineThickness
       vector: {x: 0, y: 0, z: 0}
@@ -36391,6 +36396,7 @@ Material:
     - _MouthColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
     - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
     - _OutlineThickness: {r: 0.03, g: 0.03, b: 0, a: 0}
+    - _SilentMouthSize: {r: 0.3, g: 0.01, b: 0, a: 0}
     - _TalkScale: {r: 10, g: 10, b: 0, a: 0}
     - _TalkXRange: {r: 0.5, g: 1, b: 0, a: 0}
     - _TalkYRange: {r: 0.1, g: 3, b: 0, a: 0}
@@ -46497,6 +46503,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: mouthSettings.Array.data[1].state
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].state
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -46608,6 +46624,26 @@ PrefabInstance:
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.floats.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.colors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.floats.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.colors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.floats.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
@@ -46853,6 +46889,16 @@ PrefabInstance:
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.size
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
@@ -47932,6 +47978,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.floats.Array.data[0].value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.floats.Array.data[2].value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.floats.Array.data[3].value
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.floats.Array.data[0].value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.floats.Array.data[2].value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.floats.Array.data[3].value
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[0].vectorName
       value: _EyeCenter
       objectReference: {fileID: 0}
@@ -48182,6 +48258,86 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.colors.Array.data[0].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.colors.Array.data[0].color.b
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.colors.Array.data[0].color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.colors.Array.data[0].color.r
+      value: 0.6627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.colors.Array.data[1].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.colors.Array.data[1].color.b
+      value: 0.34901962
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.colors.Array.data[1].color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.colors.Array.data[1].color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.colors.Array.data[0].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.colors.Array.data[0].color.b
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.colors.Array.data[0].color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.colors.Array.data[0].color.r
+      value: 0.6627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.colors.Array.data[1].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.colors.Array.data[1].color.b
+      value: 0.34901962
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.colors.Array.data[1].color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.colors.Array.data[1].color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.colors.Array.data[0].colorName
       value: _MouthColor
       objectReference: {fileID: 0}
@@ -48223,22 +48379,32 @@ PrefabInstance:
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[1].vector.x
-      value: 0.03
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[1].vector.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[2].vector.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[2].vector.y
       value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[3].vector.x
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[3].vector.y
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -48253,21 +48419,211 @@ PrefabInstance:
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[5].vector.x
-      value: 0.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[5].vector.y
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[6].vector.x
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[6].vector.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[7].vector.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[7].vector.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.colors.Array.data[0].colorName
+      value: _MouthColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.colors.Array.data[1].colorName
+      value: _OutlineColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.floats.Array.data[0].floatName
+      value: _EmissionMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.floats.Array.data[1].floatName
+      value: _WobbleDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.floats.Array.data[2].floatName
+      value: _WobbleSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.floats.Array.data[3].floatName
+      value: _TalkSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[0].vector.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[0].vector.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[1].vector.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[1].vector.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[3].vector.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[3].vector.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[4].vector.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[4].vector.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[5].vector.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[5].vector.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[6].vector.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[6].vector.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.colors.Array.data[0].colorName
+      value: _MouthColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.colors.Array.data[1].colorName
+      value: _OutlineColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.floats.Array.data[0].floatName
+      value: _EmissionMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.floats.Array.data[1].floatName
+      value: _WobbleDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.floats.Array.data[2].floatName
+      value: _WobbleSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.floats.Array.data[3].floatName
+      value: _TalkSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[0].vector.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[0].vector.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[1].vector.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[1].vector.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[3].vector.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[3].vector.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[4].vector.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[4].vector.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[5].vector.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[5].vector.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[6].vector.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[6].vector.y
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
@@ -48278,31 +48634,106 @@ PrefabInstance:
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[1].vectorName
-      value: _OutlineThickness
+      value: _SilentMouthSize
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[2].vectorName
-      value: _MouthCenter
+      value: _OutlineThickness
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[3].vectorName
-      value: _WobbleScale
+      value: _MouthCenter
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[4].vectorName
-      value: _TalkScale
+      value: _WobbleScale
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[5].vectorName
-      value: _TalkXRange
+      value: _TalkScale
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[6].vectorName
+      value: _TalkXRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[0].mouthAttributes.vectors.Array.data[7].vectorName
+      value: _TalkYRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[0].vectorName
+      value: _MouthBaseSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[1].vectorName
+      value: _OutlineThickness
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[2].vectorName
+      value: _MouthCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[3].vectorName
+      value: _WobbleScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[4].vectorName
+      value: _TalkScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[5].vectorName
+      value: _TalkXRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[1].mouthAttributes.vectors.Array.data[6].vectorName
+      value: _TalkYRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[0].vectorName
+      value: _MouthBaseSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[1].vectorName
+      value: _OutlineThickness
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[2].vectorName
+      value: _MouthCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[3].vectorName
+      value: _WobbleScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[4].vectorName
+      value: _TalkScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[5].vectorName
+      value: _TalkXRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: mouthSettings.Array.data[2].mouthAttributes.vectors.Array.data[6].vectorName
       value: _TalkYRange
       objectReference: {fileID: 0}
     - target: {fileID: 7333176607482636394, guid: 9675b1eabd7a22347a31c8d409ed661a,
@@ -49262,12 +49693,12 @@ PrefabInstance:
     - target: {fileID: 6865110348543519408, guid: efc6d989ecf1b1448b54b3317d87b1dc,
         type: 3}
       propertyPath: m_Range
-      value: 3.1199486
+      value: 2.6067045
       objectReference: {fileID: 0}
     - target: {fileID: 6865110348543519408, guid: efc6d989ecf1b1448b54b3317d87b1dc,
         type: 3}
       propertyPath: m_Intensity
-      value: 0.3586701
+      value: 0.39288637
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
