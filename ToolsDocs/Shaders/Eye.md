@@ -1,9 +1,4 @@
 This shader controls eyes on characters, and allows for varied eye shapes, positions, and wobbly movement. 
-
-Incomplete, punch this up a bit later:
-To properly make use of this shader, first have quads for each eye parented to a character GameObject, then add the [[CharacterVisualController]] script to that parent GameObject. In the inspector, add each eye quad's mesh renderer to the "Eyes" list. To actually be able to edit the properties of the shader, however, the CharacterVisualController will need a "blueprint" of the shader's properties.
-
-First click the "Load Properties Blueprint" button, then click the "Override Properties Ranges" button. The "Properties Ranges" dropdown should now contain every property of the shader graph as an editable field. Right click on "Properties Ranges" and select "Copy." Then, navigate back to the CharacterVisualController object, and paste into the "Eye Settings."
 ## Variables
 | Name               | Type    | Use                                                                                                                                                                                                                                                    |
 | ------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
