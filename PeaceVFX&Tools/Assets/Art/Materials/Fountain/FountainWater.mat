@@ -83,10 +83,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
+    - _AlphaScale: 7.8
     - _AlphaToMask: 0
     - _AnimSpeed: 1.5
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
+    - _BottomStrength: 0.73
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -108,20 +110,29 @@ Material:
     - _QueueOffset: 0
     - _RandomID: 0
     - _ReceiveShadows: 1
+    - _RippleAmount: 2.5
+    - _RippleIntensity: 1.59
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
+    - _StretchY: 0.1
     - _Surface: 0
+    - _VoronoiAngle: 5
+    - _VoronoiDensity: 5
+    - _VoronoiSpeed: 5
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RippleSpeed: {r: 0, g: 5, b: 0, a: 0}
     - _SmoothStepper: {r: 0, g: 1.2, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _WaterColor: {r: 0.26517436, g: 0.53058535, b: 0.95283014, a: 1}
+    - _WaterSpeed: {r: 0, g: 1.1, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2073780449763870965
 MonoBehaviour:
