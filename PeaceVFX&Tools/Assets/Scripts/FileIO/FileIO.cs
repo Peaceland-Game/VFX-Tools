@@ -8,8 +8,8 @@ using static FileIO;
 using System.Linq;
 
 /// <summary>
-/// For generalized player level loading and storing. Not
-/// for any level or player in particuluar. Also holds 
+/// For generalized bundle loading and storing. Not
+/// for any level or bundle in particuluar. Also holds 
 /// data structures to make the process more convient.
 /// 
 /// When storing data it expects it in the proper data
@@ -17,14 +17,10 @@ using System.Linq;
 /// </summary>
 public class FileIO
 {
-    [SerializeField] DataBundle playerSample;
-    [SerializeField] DataBundle playerSample2;
-
     /// <summary>
     /// Load a json file if possible. Consider that the
     /// starting directory to be from jsons folder 
     /// </summary>
-    /// <param name="playerName"></param>
     /// <returns></returns>
     public DataBundle LoadData(string bundleName, string path = "")
     {
