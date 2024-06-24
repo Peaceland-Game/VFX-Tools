@@ -10,6 +10,7 @@ ShaderGraph
 - [[MossDirectional]]
 - [[FireBase]]
 - [[Smoke]]
+- [[Fountain Water]]
 - [[Triplanar]]
 
 SubShader
