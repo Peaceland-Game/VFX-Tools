@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Peaceland Character Visual Controller
+ * Created by Narai Risser
+ * Mouth functionality added by William Duprey
+ * Last updated 6/24/24
+ */
+
 public class CharacterVisualController : MonoBehaviour
 {
     [Header("Debug")]
@@ -67,15 +74,6 @@ public class CharacterVisualController : MonoBehaviour
 
     public void UpdateEyes()
     {
-        /*
-        // Load new settings into each eye renderer's materials 
-        foreach (Renderer eyeRenderer in eyes)
-        {
-            EyeSettings settings = FindEyeSettings(emotionalState);
-            settings?.LoadAttributesIntoEye(eyeRenderer, eyeRenderer.material.shader);
-        }
-        */
-
         for (int i = 0; i < eyes.Count; i++)
         {
             // Determining a stupid, arbitrary convention:
