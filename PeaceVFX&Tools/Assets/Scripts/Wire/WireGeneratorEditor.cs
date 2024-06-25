@@ -15,5 +15,13 @@ public class WireGeneratorEditor : Editor
         {
             myScript.Calculate();
         }
+        if (GUILayout.Button("Generate Wire"))
+        {
+            myScript.GenerateWire();
+        }
+        if (GUILayout.Button("Test"))
+        {
+            myScript.Test();
+        }
     }
 }

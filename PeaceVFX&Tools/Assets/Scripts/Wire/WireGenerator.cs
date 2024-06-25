@@ -13,11 +13,38 @@ public class WireGenerator : MonoBehaviour
     [Tooltip("Spread value used to create catenary. Generated using calculate button")]
     [SerializeField] float spread;
 
+    [SerializeField] int vertexCount;
+
+    public List<Vector3> vertices;
+
     /// <summary>
     /// How many steps the algorithm will search for the first overeach when 
     /// looking for the out bounds of a. Farthest value equal to 2^MAX_STEPS
     /// </summary>
     private const int MAX_STEPS = 32; 
+
+
+    public void Test()
+    {
+        Vector3 lowerPoint, upperPoint;
+        if (points.PointA.y < points.PointB.y)
+        {
+            lowerPoint = points.PointA;
+            upperPoint = points.PointB;
+        }
+        else
+        {
+            upperPoint = points.PointA;
+            lowerPoint = points.PointB;
+        }
+
+        // Create vector which lets us find x value local to it 
+        Vector3 catenaryAxis = Vector3.ProjectOnPlane(upperPoint - lowerPoint, Vector3.up).normalized;
+        float x0 = Vector3.Dot(lowerPoint, catenaryAxis);
+        float x1 = Vector3.Dot(upperPoint, catenaryAxis);
+
+        print(Catenary(1.0f, -0.6f, -0.57f, 0.99f, 0.0f, x0, 9.91f));
+    }
 
     /// <summary>
     /// Generates the "a" variable used for the catenary equation 
@@ -42,8 +69,8 @@ public class WireGenerator : MonoBehaviour
         }
         
         // Create vector which lets us find x value local to it 
-        Vector3 catenaryAxis = Vector3.ProjectOnPlane(lowerPoint - upperPoint, Vector3.up).normalized;
-        float x0 = Vector3.Dot(lowerPoint, catenaryAxis); // Fix to be correct dir 
+        Vector3 catenaryAxis = Vector3.ProjectOnPlane(upperPoint - lowerPoint, Vector3.up).normalized;
+        float x0 = Vector3.Dot(lowerPoint, catenaryAxis); 
         float x1 = Vector3.Dot(upperPoint, catenaryAxis);
         
         for (int i = 0; i < MAX_STEPS; i++)
@@ -54,7 +81,7 @@ public class WireGenerator : MonoBehaviour
             float difference = Catenary(Mathf.Pow(2, i), x0, lowerPoint.y, x1, upperPoint.y, x1, length) - upperPoint.y;
             
             // Is catenary overextended yet? 
-            if(difference < 0.0f)
+            if (difference < 0.0f)
             {
                 // Begin iterations search 
                 spread = HalfSearch(i > 0 ? Mathf.Pow(2, i - 1) : 0.00001f, Mathf.Pow(2, i), x0, lowerPoint.y, x1, upperPoint.y, length);
@@ -79,7 +106,7 @@ public class WireGenerator : MonoBehaviour
     private float HalfSearch(float min, float max, float x0, float y0, float x1, float y1, float s)
     {
         float value = 0.0f;
-
+        
         for (int i = 0; i < iterations; i++)
         {
             value = (max + min) / 2.0f;
@@ -87,7 +114,7 @@ public class WireGenerator : MonoBehaviour
             
             // If value is less midpoint is now min 
             // otherwise it is now max 
-            if (difference < 0.0f)
+            if (difference > 0.0f)
             {
                 min = value;
             }
@@ -105,9 +132,37 @@ public class WireGenerator : MonoBehaviour
     /// </summary>
     public void GenerateWire()
     {
+        vertices.Clear();
 
+        Vector3 lowerPoint, upperPoint;
+        if (points.PointA.y < points.PointB.y)
+        {
+            lowerPoint = points.PointA;
+            upperPoint = points.PointB;
+        }
+        else
+        {
+            upperPoint = points.PointA;
+            lowerPoint = points.PointB;
+        }
+
+        // Create vector which lets us find x value local to it 
+        Vector3 catenaryAxis = Vector3.ProjectOnPlane(upperPoint - lowerPoint, Vector3.up).normalized;
+        float x0 = Vector3.Dot(lowerPoint, catenaryAxis);
+        float x1 = Vector3.Dot(upperPoint, catenaryAxis);
+
+        float diff = Mathf.Abs(x1 - x0) / (float)vertexCount; 
+        for (int i = 0; i < vertexCount; i++)
+        {
+            float x = (i * diff) + x0;
+            vertices.Add(
+                new Vector3(
+                    x,
+                    Catenary(spread, x0, lowerPoint.y, x1, upperPoint.y, x, length),
+                    0.0f
+                    ));
+        }
     }
-
 
 
     /// <summary>
@@ -124,21 +179,14 @@ public class WireGenerator : MonoBehaviour
     private float Catenary(float a, float x0, float y0, float x1, float y1, float x, float s)
     {
         float v = Mathf.Abs(y1 - y0);
-        float d0 = 0.2f * (v + a * Mathf.Log((s + v) / (s - v)));
+        float h = Mathf.Abs(x1 - x0);
+        float d0 = 0.2f * (h + a * Mathf.Log((s + v) / (s - v)));
         float numA = x - (x0 + d0);
         float k = x0 + d0;
 
-        print(x0 + d0);
-        //print(a * Mathf.Log((s + v) / (s - v))); 
-
-
-        float final = (a * Cosh(numA / a)) + (y0 - a * Cosh((x - k) / a));
-        if(float.IsNaN(final))
-        {
-            print((a * Cosh(numA / a)));
-        }
-
-        return (a * Cosh(numA / a)) + (y0 - a * Cosh((x - k) / a));
+        float final = (a * Cosh(numA / a)) + (y0 - a * Cosh((x0 - k) / a));
+        
+        return final;
     }
 
     /// <summary>
@@ -163,5 +211,13 @@ public class WireGenerator : MonoBehaviour
     {
         Gizmos.DrawSphere(this.transform.position + points.PointA, 0.05f);
         Gizmos.DrawSphere(this.transform.position + points.PointB, 0.05f);
+
+        if(vertices != null)
+        {
+            for(int i = 0; i < vertices.Count; i++)
+            {
+                Gizmos.DrawSphere(this.transform.position + vertices[i], 0.01f);
+            }
+        }
     }
 }
