@@ -19,9 +19,5 @@ public class WireGeneratorEditor : Editor
         {
             myScript.GenerateWire();
         }
-        if (GUILayout.Button("Test"))
-        {
-            myScript.Test();
-        }
     }
 }
