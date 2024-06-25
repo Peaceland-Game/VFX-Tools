@@ -30123,6 +30123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110305265}
+  - component: {fileID: 1110305266}
   m_Layer: 0
   m_Name: WireCustom
   m_TagString: Untagged
@@ -30145,6 +30146,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110305266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110305264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2c0a438985b6a42a56e487a73b5af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  length: 5
+  iterations: 51
+  points:
+    PointA: {x: 0.99, y: 0, z: 0}
+    PointB: {x: -0.6, y: -0.57, z: 0}
+  spread: 1
 --- !u!1 &1202832839
 GameObject:
   m_ObjectHideFlags: 0
