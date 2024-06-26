@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -84,12 +85,20 @@ public class ShaderPropertyEdit : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Resets all the ranges to mimic the blueprint and adds any missing ranges if needed. Will remove any
+    /// created ranges so use with caution
+    /// </summary>
     public void OverrideRanges()
     {
         // Create ranges object 
         propertiesRanges = new RangeProperties(propertiesBP);
     }
 
+    /// <summary>
+    /// Go through each property range and choose a random value between those
+    /// given values 
+    /// </summary>
     public void GenerateRandomProperties()
     {
         if (propertiesRanges == null)
@@ -124,6 +133,8 @@ public class ShaderPropertyEdit : MonoBehaviour
         }
     }
 
+    /// Used to to help shader property edits logic in different scripts 
+    #region LogicHelpers
 
     /// <summary>
     /// If a properties was created outside this script use this
@@ -231,6 +242,99 @@ public class ShaderPropertyEdit : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Interpolates between two shader properties. Resulting shader properties
+    /// will only include properties included in both parameters. Make sure that
+    /// property helpers have been generated before calling this function 
+    /// </summary>
+    /// <param name="propertiesA"></param>
+    /// <param name="propertiesB"></param>
+    /// <param name="t"></param>
+    /// <returns></returns>
+    public static ShaderProperties InterpolateProperties(ShaderProperties propertiesA, ShaderProperties propertiesB, float t)
+    {
+        ShaderProperties properties = new ShaderProperties();
+
+        for(int i = 0; i < propertiesA.nameAndType.Count; i++)
+        {
+            Tuple<string, ShaderPropertyType> pair = propertiesA.nameAndType[i];
+
+            string name = pair.Item1;
+            int indexA, indexB;
+
+            indexA = propertiesA.nameToIndex[name];
+            indexB = propertiesB.nameToIndex[name];
+
+            // Check if both indicies exist. Following will NOT
+            // work if both properties contain the same name.
+
+            // TODO: Fix bug if two variables have same name but
+            //       different types 
+            
+
+            // Find correct type and interpolate 
+            switch (pair.Item2)
+            {
+                case ShaderPropertyType.Color:
+
+                    UnityEngine.Color colorA = propertiesA.colors[indexA].color;
+                    UnityEngine.Color colorB = propertiesB.colors[indexB].color;
+
+                    ColorHelper cHelper = new ColorHelper(name);
+                    cHelper.color = UnityEngine.Color.Lerp(colorA, colorB, t);
+                    properties.colors.Add(cHelper);
+
+                    break;
+                case ShaderPropertyType.Vector:
+
+                    Vector4 vecA = propertiesA.vectors[indexA].vector;
+                    Vector4 vecB = propertiesB.vectors[indexB].vector;
+
+                    VectorHelper vHelper = new VectorHelper(name);
+                    vHelper.vector = Vector4.Lerp(vecA, vecB, t);
+                    properties.vectors.Add(vHelper);
+
+                    break;
+                case ShaderPropertyType.Float:
+
+                    float fA = propertiesA.floats[indexA].value;
+                    float fB = propertiesB.floats[indexB].value;
+
+                    FloatHelper fHelper = new FloatHelper(name);
+                    fHelper.value = Mathf.Lerp(fA, fB, t);
+                    properties.floats.Add(fHelper);
+
+                    break;
+                case ShaderPropertyType.Range:
+
+                    SFloatRange rA = propertiesA.ranges[indexA].range;
+                    SFloatRange rB = propertiesB.ranges[indexB].range;
+
+                    // Maximize range using smallest min and largest max
+                    // Average the value 
+
+                    /*RangeHelper rHelper = new RangeHelper(name);
+                    SFloatRange range = new SFloatRange(rA, rB, t);
+                    range.SetValue()
+                    rHelper.range = Mathf.Lerp(rA, rB, t);
+                    properties.ranges.Add(fHelper);*/
+
+                    break;
+                case ShaderPropertyType.Texture:
+                    break;
+                case ShaderPropertyType.Int:
+                    break;
+                default:
+                    indexA = -1;
+                    indexB = -1;
+                    break;
+            }
+        }
+
+        return properties;
+    }
+
+    #endregion
 
     #region ShaderProperties
 

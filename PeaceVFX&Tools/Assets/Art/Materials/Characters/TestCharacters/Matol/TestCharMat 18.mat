@@ -38,35 +38,35 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AngleOffset: 32.735603
-    - _CellDensity: 13.240569
-    - _DisTimeScale: 0.1693748
-    - _DisplacementScale: 0.013981029
+    - _AngleOffset: 49.826527
+    - _CellDensity: 7.341011
+    - _DisTimeScale: 0.21598624
+    - _DisplacementScale: 0.0077858637
     - _Float: 0.599
     - _GradientThresholdA: 0.33
     - _GradientThresholdB: 0.48
     - _Metallic: 0
-    - _NoiseType: 0.35394865
-    - _PrimaryMetallic: 0.11834703
-    - _PrimarySmoothness: 0.14618611
+    - _NoiseType: 0.2453934
+    - _PrimaryMetallic: 0.21910293
+    - _PrimarySmoothness: 0.11237655
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReScale: 0.2
-    - _Rescale: 0.20355079
-    - _Saturation: 0.95503163
-    - _SecondaryMetallic: 0.16336969
-    - _SecondarySmoothness: 0.18581243
+    - _Rescale: 0.1727144
+    - _Saturation: 0.7269205
+    - _SecondaryMetallic: 0.12063483
+    - _SecondarySmoothness: 0.1839582
     - _SharperNoiseScale: 30
-    - _SimpleGradientThresholdA: 0.14509422
-    - _SimpleGradientThresholdB: 0.4534158
-    - _SimpleNoiseScale: 36.484276
+    - _SimpleGradientThresholdA: 0.14195186
+    - _SimpleGradientThresholdB: 0.8701917
+    - _SimpleNoiseScale: 10.591373
     - _Slider: 0
     - _Smoothness: 0.474
-    - _TimeScale: 0.102904946
-    - _VertexAngleOffset: 11.692326
-    - _VertexCellDensity: 4.484048
-    - _VoronoiGradientThresholdA: 0.3072869
-    - _VoronoiGradientThresholdB: 0.79256105
+    - _TimeScale: 0.16150722
+    - _VertexAngleOffset: 9.70069
+    - _VertexCellDensity: 3.8297205
+    - _VoronoiGradientThresholdA: 0.30455673
+    - _VoronoiGradientThresholdB: 0.78376657
     - _angleOffset: 2
     - _cellDensity: 5
     - _noiseScale: 0.63
@@ -74,17 +74,17 @@ Material:
     - _timeScale: 0.1
     m_Colors:
     - _GoopSize: {r: 0.29, g: 0.56, b: 0, a: 0}
-    - _Highlight: {r: 0.71343064, g: 0.6633732, b: 0.5777945, a: 1}
-    - _PatternDirection: {r: -0.45376003, g: -0.2576815, b: 0, a: 0}
-    - _Primary: {r: 0.36078432, g: 0.47039595, b: 0.5191855, a: 1}
-    - _Secondary: {r: 0.36078432, g: 0.46989092, b: 0.5232257, a: 1}
-    - _SimpleCenter: {r: -0.15358911, g: 0.21254185, b: 0, a: 0}
+    - _Highlight: {r: 0.6764033, g: 0.7422391, b: 0.74403477, a: 1}
+    - _PatternDirection: {r: 0.5551045, g: -0.0010229349, b: 0, a: 0}
+    - _Primary: {r: 0.65619606, g: 0.74569285, b: 0.6253941, a: 1}
+    - _Secondary: {r: 0.8123598, g: 0.83294463, b: 0.808066, a: 1}
+    - _SimpleCenter: {r: 0.1719953, g: -0.019754164, b: 0, a: 0}
     - _SimpleDirection: {r: 1, g: 1, b: 0, a: 0}
-    - _SimpleSize: {r: 0.88047266, g: 0.4431466, b: 0, a: 0}
+    - _SimpleSize: {r: 0.8604325, g: 0.5026278, b: 0, a: 0}
     - _TimeScale: {r: -0.1, g: 0.15, b: 0, a: 0}
-    - _VoronoiCenter: {r: -0.0973549, g: 0.16150498, b: 0, a: 0}
+    - _VoronoiCenter: {r: 0.08737319, g: 0.2293666, b: 0, a: 0}
     - _VoronoiDirection: {r: -1, g: 1, b: 0, a: 0}
-    - _VoronoiSize: {r: 0.60678333, g: 0.62711996, b: 0, a: 0}
+    - _VoronoiSize: {r: 0.3608017, g: 0.40603694, b: 0, a: 0}
     - _goopSize: {r: 0.3, g: 0.38, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1470165066475881991

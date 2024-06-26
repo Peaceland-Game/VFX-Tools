@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /*
@@ -29,10 +30,20 @@ public class CharacterVisualController : MonoBehaviour
     [SerializeField] List<Renderer> mouths;
     [SerializeField] List<MouthSettings> mouthSettings;
 
-    private Material[] materials;
+    [Header("Pattern")]
+    [SerializeField] List<PatternSettings> patterns;
+    [Tooltip("How fast does the pattern change from one state to another")]
+    [SerializeField] float changeTime;
 
-    private int activeCoroutines = 0;
+    // If currently in the process of changing then hold onto next
+    // Overwrites this if multiple changes are requested 
+    private EmotionalState nextPatternEmotion;
+    private bool isPatternChanging = false;
+
+
+    private Material[] materials;
     private EmotionalState holdState;
+
 
     private void Start()
     {
@@ -40,36 +51,18 @@ public class CharacterVisualController : MonoBehaviour
         holdState = emotionalState;
     }
 
-    // Update is called once per frame
     void Update()
-    {
-        DebugLogic();
-        EyeLogic();
-        MouthLogic();
-    }
-
-    public void EyeLogic()
     {
         if (emotionalState == holdState)
         {
             return;
         }
 
-        holdState = emotionalState;
-
         UpdateEyes();
-    }
-
-    public void MouthLogic()
-    {
-        if(emotionalState == holdState)
-        {
-            return;
-        }
-
-        holdState = emotionalState;
-
         UpdateMouth();
+        UpdatePattern();
+
+        holdState = emotionalState; 
     }
 
     public void UpdateEyes()
@@ -105,6 +98,38 @@ public class CharacterVisualController : MonoBehaviour
             settings?.LoadAttributesIntoMouth(mouths[i], mouths[i].material.shader, isTalking);
         }
     }
+
+    /// <summary>
+    /// Updates the body pattern 
+    /// </summary>
+    public void UpdatePattern()
+    {
+        // Check if alreay shifting 
+        if (isPatternChanging)
+        {
+            nextPatternEmotion = emotionalState;
+            return;
+        }
+
+        // Start shift to next pattern 
+        isPatternChanging = true;
+        StartCoroutine(ChangePatternCo());
+    }
+
+    private IEnumerator ChangePatternCo()
+    {
+        float timer = 0.0f; 
+
+        while(timer <= changeTime)
+        {
+            // Lerp the different shader proprty 
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        isPatternChanging = false;
+    }
+
 
     /// <summary>
     /// Searches for the first 
@@ -192,6 +217,25 @@ public class CharacterVisualController : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    /// Holds the pattern settings specific to an emotion 
+    /// </summary>
+    [Serializable]
+    private class PatternSettings
+    {
+        [SerializeField] public EmotionalState state;
+        [SerializeField] ShaderPropertyEdit.ShaderProperties patternAttributes;
+       
+        public void LoadAttributesIntoPattern(Renderer bodyRenderer, Shader shader)
+        {
+            // Call the generic methods for loading shader properties for the material
+            ShaderPropertyEdit.GeneratePropertyHelpers(patternAttributes, shader);
+            ShaderPropertyEdit.LoadIntoMaterial(Application.isEditor ? bodyRenderer.sharedMaterial : bodyRenderer.material, patternAttributes);
+        }
+    }
+
+
     private enum EmotionalState
     {
         CONTENT,
@@ -204,51 +248,6 @@ public class CharacterVisualController : MonoBehaviour
     }
 
     #region Debug
-
-    private void DebugLogic()
-    {
-        if (activeCoroutines > 0)
-            return;
-
-        bool shouldTransition = Input.GetKeyDown(KeyCode.T);
-
-        if (shouldTransition)
-        {
-            foreach (Material mat in materials)
-            {
-                StartCoroutine(Transition(mat));
-                activeCoroutines++;
-            }
-        }
-    }
-
-    private IEnumerator Transition(Material mat)
-    {
-        float lerp = mat.GetFloat("_NoiseType");
-        print(lerp);
-        if(lerp <= .001f)
-        {
-            while (lerp <= 1.0f)
-            {
-                mat.SetFloat("_NoiseType", curve.Evaluate(Mathf.PingPong(lerp, 1.0f)));
-
-                lerp += speed * Time.deltaTime;
-                yield return null;
-            }
-        }
-        else
-        {
-            while (lerp >= 0.0f)
-            {
-                mat.SetFloat("_NoiseType", curve.Evaluate(Mathf.PingPong(lerp, 1.0f)));
-
-                lerp -= speed * Time.deltaTime;
-                yield return null;
-            }
-        }
-
-        activeCoroutines--;
-    }
 
     #endregion
 }
