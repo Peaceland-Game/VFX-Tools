@@ -97,6 +97,9 @@ public class ShaderPropertyEdit : MonoBehaviour
 
         generatedProperties = new List<ShaderProperties>();
         
+        if(propertiesBP == null)
+            LoadProperties();
+
         for (int i = 0; i < numToGenerate; i++)
         {
             ShaderProperties properties = propertiesRanges.GenerateSP(propertiesBP);

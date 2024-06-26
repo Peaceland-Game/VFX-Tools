@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TestCharMat 13
+  m_Shader: {fileID: -6465566751694194690, guid: 2de933b20859e28468c965c7119810ab,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AngleOffset: 45.20455
+    - _CellDensity: 4.475045
+    - _DisTimeScale: 0.20046233
+    - _DisplacementScale: 0.01659269
+    - _Float: 0.599
+    - _GradientThresholdA: 0.33
+    - _GradientThresholdB: 0.48
+    - _Metallic: 0
+    - _NoiseType: 0.9912467
+    - _PrimaryMetallic: 0.13664037
+    - _PrimarySmoothness: 0.14370033
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReScale: 0.2
+    - _Rescale: 0.22165509
+    - _Saturation: 0.6918478
+    - _SecondaryMetallic: 0.10326954
+    - _SecondarySmoothness: 0.27723485
+    - _SharperNoiseScale: 30
+    - _SimpleGradientThresholdA: 0.13503796
+    - _SimpleGradientThresholdB: 0.8113149
+    - _SimpleNoiseScale: 26.959187
+    - _Slider: 0
+    - _Smoothness: 0.474
+    - _TimeScale: 0.18610978
+    - _VertexAngleOffset: 5.614767
+    - _VertexCellDensity: 4.519597
+    - _VoronoiGradientThresholdA: 0.40215018
+    - _VoronoiGradientThresholdB: 0.72780216
+    - _angleOffset: 2
+    - _cellDensity: 5
+    - _noiseScale: 0.63
+    - _reScale: -0.17
+    - _timeScale: 0.1
+    m_Colors:
+    - _GoopSize: {r: 0.29, g: 0.56, b: 0, a: 0}
+    - _Highlight: {r: 0.68310744, g: 0.7279597, b: 0.7139354, a: 1}
+    - _PatternDirection: {r: -0.8349569, g: 0.20401871, b: 0, a: 0}
+    - _Primary: {r: 0.30374515, g: 0.6101002, b: 0.686461, a: 1}
+    - _Secondary: {r: 0.16851683, g: 0.5490012, b: 0.62387973, a: 1}
+    - _SimpleCenter: {r: 0.05965338, g: 0.30123264, b: 0, a: 0}
+    - _SimpleDirection: {r: 1, g: 1, b: 0, a: 0}
+    - _SimpleSize: {r: 0.8158883, g: 0.857057, b: 0, a: 0}
+    - _TimeScale: {r: -0.1, g: 0.15, b: 0, a: 0}
+    - _VoronoiCenter: {r: -0.036218632, g: 0.27167246, b: 0, a: 0}
+    - _VoronoiDirection: {r: -1, g: 1, b: 0, a: 0}
+    - _VoronoiSize: {r: 0.3744767, g: 0.50834984, b: 0, a: 0}
+    - _goopSize: {r: 0.3, g: 0.38, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &1470165066475881991
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
