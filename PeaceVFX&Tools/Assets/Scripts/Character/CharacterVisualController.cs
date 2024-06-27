@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static ShaderPropertyEdit;
 
 /*
  * Peaceland Character Visual Controller
@@ -11,13 +12,9 @@ using UnityEngine;
  * Last updated 6/24/24
  */
 
+[ExecuteAlways]
 public class CharacterVisualController : MonoBehaviour
 {
-    [Header("Debug")]
-    [SerializeField] Renderer renderer;
-    [SerializeField] float speed;
-    [SerializeField] AnimationCurve curve;
-
     [Header("Overall Visuals")]
     [SerializeField] EmotionalState emotionalState;
 
@@ -32,27 +29,30 @@ public class CharacterVisualController : MonoBehaviour
 
     [Header("Pattern")]
     [SerializeField] List<PatternSettings> patterns;
+    [SerializeField] List<Renderer> bodies;
     [Tooltip("How fast does the pattern change from one state to another")]
     [SerializeField] float changeTime;
 
     // If currently in the process of changing then hold onto next
     // Overwrites this if multiple changes are requested 
     private EmotionalState nextPatternEmotion;
-    private bool isPatternChanging = false;
+    private bool isPatternChanging { get { return patternCoroutine != null; } }
+    private Coroutine patternCoroutine;
 
-
-    private Material[] materials;
     private EmotionalState holdState;
+    private bool isHolding = false;
 
 
     private void Start()
     {
-        materials = renderer.materials;
         holdState = emotionalState;
     }
 
     void Update()
     {
+        if (Application.isEditor)
+            return;
+
         if (emotionalState == holdState)
         {
             return;
@@ -104,35 +104,66 @@ public class CharacterVisualController : MonoBehaviour
     /// </summary>
     public void UpdatePattern()
     {
+        if(bodies.Count == 0)
+        {
+            Debug.LogError("No bodies to apply to");
+            return;
+        }
+
         // Check if alreay shifting 
         if (isPatternChanging)
         {
+            // Hold onto the next desired emotional pattern and override
+            // previous nextPatternEmotion if multiple request are made  
             nextPatternEmotion = emotionalState;
+            isHolding = true;
             return;
         }
 
         // Start shift to next pattern 
-        isPatternChanging = true;
-        StartCoroutine(ChangePatternCo());
+        patternCoroutine = StartCoroutine(ChangePatternCo(holdState, emotionalState));
     }
 
-    private IEnumerator ChangePatternCo()
+    private IEnumerator ChangePatternCo(EmotionalState currentState, EmotionalState nextState)
     {
-        float timer = 0.0f; 
+        float timer = 0.0f;
 
-        while(timer <= changeTime)
+        PatternSettings interpolated = new PatternSettings();
+
+        PatternSettings currProps = FindPatternSettings(currentState);
+        PatternSettings nextProps = FindPatternSettings(nextState);
+        
+        while (timer <= changeTime)
         {
-            // Lerp the different shader proprty 
+            // Make sure to load helpers 
+            currProps.patternAttributes.GeneratePropertyHelpers();
+            nextProps.patternAttributes.GeneratePropertyHelpers();
+
+            // Lerp property values 
+            ShaderProperties interpolatedProperties =
+                ShaderPropertyEdit.InterpolateProperties(
+                    currProps.patternAttributes,
+                    nextProps.patternAttributes,
+                    timer / changeTime);
+
+            interpolatedProperties.GeneratePropertyHelpers();
+            interpolated.patternAttributes = interpolatedProperties;
+
+            for(int i = 0; i < bodies.Count; i++)
+            {
+                interpolated.LoadAttributesIntoPattern(bodies[i], bodies[i].sharedMaterial.shader);
+            }
+
             timer += Time.deltaTime;
             yield return null;
         }
 
-        isPatternChanging = false;
+        patternCoroutine = null;
     }
 
 
     /// <summary>
-    /// Searches for the first 
+    /// Searches for the first eye settings with matching emotion type 
     /// </summary>
     /// <param name="state"></param>
     /// <returns></returns>
@@ -152,7 +183,7 @@ public class CharacterVisualController : MonoBehaviour
     }
 
     /// <summary>
-    /// Copy of FindEyeSettings, but for the mouth.
+    /// Searching for the first mouth settings with matching emotion type 
     /// </summary>
     /// <param name="state"></param>
     /// <returns></returns>
@@ -168,6 +199,26 @@ public class CharacterVisualController : MonoBehaviour
 
         // Mouth not found
         Debug.LogWarning("Mouth state " + state + " not found");
+        return null;
+    }
+
+    /// <summary>
+    /// Searching for the first pattern settings with matching emotion type 
+    /// </summary>
+    /// <param name="state"></param>
+    /// <returns></returns>
+    private PatternSettings FindPatternSettings(EmotionalState state)
+    {
+        foreach (PatternSettings pattern in patterns)
+        {
+            if (pattern.state == state)
+            {
+                return pattern;
+            }
+        }
+
+        // Mouth not found
+        Debug.LogWarning("Pattern state " + state + " not found");
         return null;
     }
 
@@ -217,7 +268,6 @@ public class CharacterVisualController : MonoBehaviour
         }
     }
 
-
     /// <summary>
     /// Holds the pattern settings specific to an emotion 
     /// </summary>
@@ -225,12 +275,12 @@ public class CharacterVisualController : MonoBehaviour
     private class PatternSettings
     {
         [SerializeField] public EmotionalState state;
-        [SerializeField] ShaderPropertyEdit.ShaderProperties patternAttributes;
+        [SerializeField] public ShaderPropertyEdit.ShaderProperties patternAttributes;
        
         public void LoadAttributesIntoPattern(Renderer bodyRenderer, Shader shader)
         {
             // Call the generic methods for loading shader properties for the material
-            ShaderPropertyEdit.GeneratePropertyHelpers(patternAttributes, shader);
+            //ShaderPropertyEdit.GeneratePropertyHelpers(patternAttributes, shader);
             ShaderPropertyEdit.LoadIntoMaterial(Application.isEditor ? bodyRenderer.sharedMaterial : bodyRenderer.material, patternAttributes);
         }
     }
@@ -246,8 +296,4 @@ public class CharacterVisualController : MonoBehaviour
         JOYFUL,
         ANGRY
     }
-
-    #region Debug
-
-    #endregion
 }

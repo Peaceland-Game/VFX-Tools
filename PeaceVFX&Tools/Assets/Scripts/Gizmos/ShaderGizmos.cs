@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 
 public class ShaderGizmos : MonoBehaviour
 {
-    [SerializeField] Renderer renderer;
+    [SerializeField] Renderer shaderRenderer;
     [SerializeField] List<ShaderGizmosSettings> shaderGizmos;
 
     [Serializable]

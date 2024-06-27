@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 public class GlowCloud : MonoBehaviour
 {
-    [SerializeField] Renderer renderer;
+    [SerializeField] Renderer glowRenderer;
     [SerializeField] Color color;
     [SerializeField] Vector2 intensityRange;
     [SerializeField] Vector2 disRange;
@@ -23,6 +23,6 @@ public class GlowCloud : MonoBehaviour
         float disSqr = Vector3.SqrMagnitude(this.transform.position - cam.transform.position);
         float lerp = Mathf.InverseLerp(disRange.x, disRange.y, disSqr);
 
-        renderer.material.SetColor("_Color", color * Mathf.Lerp(intensityRange.x, intensityRange.y, lerp));
+        glowRenderer.material.SetColor("_Color", color * Mathf.Lerp(intensityRange.x, intensityRange.y, lerp));
     }
 }

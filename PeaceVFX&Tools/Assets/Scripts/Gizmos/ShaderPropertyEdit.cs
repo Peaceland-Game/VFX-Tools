@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -51,7 +48,7 @@ public class ShaderPropertyEdit : MonoBehaviour
                     case ShaderPropertyType.Color:
                         propertiesBP.nameToIndex.Add(name, propertiesBP.colors.Count);
                         ColorHelper colorHelper = new ColorHelper(name);
-                        colorHelper.color = (Color)shader.GetPropertyDefaultVectorValue(i);
+                        colorHelper.color = (UnityEngine.Color)shader.GetPropertyDefaultVectorValue(i);
                         propertiesBP.colors.Add(colorHelper);
                         break;
                     case ShaderPropertyType.Vector:
@@ -143,9 +140,11 @@ public class ShaderPropertyEdit : MonoBehaviour
     /// <param name="properties"></param>
     public static void GeneratePropertyHelpers(ShaderProperties properties, Shader shader)
     {
+        Debug.LogWarning("Using deprecated GeneratePropertyHelpers function. Try calling directly from the properties instead");
+
         properties.nameAndType = new List<Tuple<string, ShaderPropertyType>>();
         properties.nameToType = new Dictionary<string, ShaderPropertyType>();
-
+        
         int propertyCount =
             properties.colors.Count + 
             properties.vectors.Count + 
@@ -164,15 +163,17 @@ public class ShaderPropertyEdit : MonoBehaviour
         // Combine all properties into lists 
         for (int i = 0; i < propertyCount; i++)
         {
-            Tuple<string, ShaderPropertyType> nameAndType =
-                                new Tuple<string, ShaderPropertyType>(shader.GetPropertyName(i), shader.GetPropertyType(i));
-
             string name = shader.GetPropertyName(i);
             ShaderPropertyType type = shader.GetPropertyType(i);
+
+            Tuple<string, ShaderPropertyType> nameAndType =
+                                new Tuple<string, ShaderPropertyType>(name, type);
+
             properties.nameAndType.Add(nameAndType);
             properties.nameToType.Add(name, type);
 
-            // Keep track of property indecies 
+            // Keep track of property indicies in their
+            // respective lists
             switch (type)
             {
                 case ShaderPropertyType.Color:
@@ -306,27 +307,52 @@ public class ShaderPropertyEdit : MonoBehaviour
 
                     break;
                 case ShaderPropertyType.Range:
-
+                    print(name);
                     SFloatRange rA = propertiesA.ranges[indexA].range;
                     SFloatRange rB = propertiesB.ranges[indexB].range;
 
                     // Maximize range using smallest min and largest max
                     // Average the value 
 
-                    /*RangeHelper rHelper = new RangeHelper(name);
-                    SFloatRange range = new SFloatRange(rA, rB, t);
-                    range.SetValue()
-                    rHelper.range = Mathf.Lerp(rA, rB, t);
-                    properties.ranges.Add(fHelper);*/
+                    RangeHelper rHelper = new RangeHelper(name);
+                    SFloatRange range = new SFloatRange(
+                        Mathf.Lerp(rA.GetValue(), rB.GetValue(), t),
+                        rA.GetRange().x < rB.GetRange().x ? rA.GetRange().x : rB.GetRange().x, // Get lower min 
+                        rA.GetRange().y > rB.GetRange().y ? rA.GetRange().y : rB.GetRange().y); // Get higher max 
+
+                    rHelper.range = range;
+                    properties.ranges.Add(rHelper);
 
                     break;
                 case ShaderPropertyType.Texture:
+
+                    // Choose texture based on which part t is closer to
+                    float value = Mathf.Round(Mathf.Clamp01(t));
+
+                    if((int)value == 0)
+                    {
+                        
+                    }
+                    else
+                    {
+
+                    }
+
+                    Debug.LogError("Texture interpolating not yet implemented");
+
                     break;
                 case ShaderPropertyType.Int:
+
+                    int iA = propertiesA.ints[indexA].value;
+                    int iB = propertiesB.ints[indexB].value;
+
+                    IntHelper iHelper = new IntHelper(name);
+                    iHelper.value = (int)Mathf.Lerp((float)iA, (float)iB, t);
+                    properties.ints.Add(iHelper);
+
                     break;
                 default:
-                    indexA = -1;
-                    indexB = -1;
+                    Debug.LogWarning("Invalid ShaderPropertyType: " + pair.Item2);
                     break;
             }
         }
@@ -352,65 +378,142 @@ public class ShaderPropertyEdit : MonoBehaviour
         [SerializeField] public List<Texture> texs = new List<Texture>();
         [SerializeField] public List<IntHelper> ints = new List<IntHelper>();
 
-    }
-
-    [Serializable]
-    public class ColorHelper
-    {
-        [SerializeField] public string colorName;
-        [SerializeField] public Color color = new Color();
-
-        public ColorHelper(string name)
+        /// <summary>
+        /// Generates the proper helper variables using current helper
+        /// variables that are attached to this object 
+        /// </summary>
+        public void GeneratePropertyHelpers()
         {
-            colorName = name;
+            nameAndType = new List<Tuple<string, ShaderPropertyType>>();
+            nameToType = new Dictionary<string, ShaderPropertyType>();
+            nameToIndex = new Dictionary<string, int>();
+
+            // Add colors 
+            for (int i = 0; i < colors.Count; i++)
+            {
+                nameAndType.Add(new Tuple<string, ShaderPropertyType>(
+                    colors[i].name,
+                    ShaderPropertyType.Color));
+                nameToType.Add(colors[i].name, ShaderPropertyType.Color);
+
+                nameToIndex[colors[i].name] = i;
+            }
+
+            // Add vectors 
+            for (int i = 0; i < vectors.Count; i++)
+            {
+                nameAndType.Add(new Tuple<string, ShaderPropertyType>(
+                    vectors[i].name,
+                    ShaderPropertyType.Vector));
+                nameToType.Add(vectors[i].name, ShaderPropertyType.Vector);
+
+                nameToIndex[vectors[i].name] = i;
+            }
+
+            // Add floats 
+            for (int i = 0; i < floats.Count; i++)
+            {
+                nameAndType.Add(new Tuple<string, ShaderPropertyType>(
+                    floats[i].name,
+                    ShaderPropertyType.Float));
+                nameToType.Add(floats[i].name, ShaderPropertyType.Float);
+
+                nameToIndex[floats[i].name] = i;
+            }
+
+            // Add ranges 
+            for (int i = 0; i < ranges.Count; i++)
+            {
+                nameAndType.Add(new Tuple<string, ShaderPropertyType>(
+                    ranges[i].name,
+                    ShaderPropertyType.Range));
+                nameToType.Add(ranges[i].name, ShaderPropertyType.Range);
+
+                nameToIndex[ranges[i].name] = i;
+            }
+
+            // Add textures 
+            for (int i = 0; i < texs.Count; i++)
+            {
+                nameAndType.Add(new Tuple<string, ShaderPropertyType>(
+                    texs[i].name,
+                    ShaderPropertyType.Texture));
+                nameToType.Add(texs[i].name, ShaderPropertyType.Texture);
+
+                nameToIndex[texs[i].name] = i;
+            }
+
+            // Add ints 
+            for (int i = 0; i < ints.Count; i++)
+            {
+                nameAndType.Add(new Tuple<string, ShaderPropertyType>(
+                    ints[i].name,
+                    ShaderPropertyType.Int));
+                nameToType.Add(ints[i].name, ShaderPropertyType.Int);
+
+                nameToIndex[floats[i].name] = i;
+            }
         }
     }
 
     [Serializable]
-    public class VectorHelper
+    public class VariableHelper
     {
-        [SerializeField] public string vectorName;
+        [SerializeField] public string name;
+    }
+
+    [Serializable]
+    public class ColorHelper : VariableHelper
+    {
+        [SerializeField] public UnityEngine.Color color = new UnityEngine.Color();
+
+        public ColorHelper(string name)
+        {
+            this.name = name;
+        }
+    }
+
+    [Serializable]
+    public class VectorHelper : VariableHelper
+    {
         [SerializeField] public Vector3 vector;
 
         public VectorHelper(string name)
         {
-            vectorName = name;
+            this.name = name;
         }
     }
 
     [Serializable]
-    public class FloatHelper
+    public class FloatHelper : VariableHelper
     {
-        [SerializeField] public string floatName;
         [SerializeField] public float value;
 
         public FloatHelper(string name)
         {
-            floatName = name;
+            this.name = name;
         }
     }
 
     [Serializable]
-    public class RangeHelper // :3 
+    public class RangeHelper : VariableHelper // :3 
     {
-        [SerializeField] public string rangeName;
         [SerializeField] public SFloatRange range;
 
         public RangeHelper(string name)
         {
-            rangeName = name;
+            this.name = name;
         }
     }
 
     [Serializable]
-    public class IntHelper
+    public class IntHelper : VariableHelper
     {
-        [SerializeField] public string intName;
         [SerializeField] public int value;
 
         public IntHelper(string name)
         {
-            intName = name;
+            this.name = name;
         }
     }
 

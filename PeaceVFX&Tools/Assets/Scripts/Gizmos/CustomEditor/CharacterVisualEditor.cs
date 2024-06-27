@@ -25,5 +25,9 @@ public class CharacterVisualEditor : Editor
         {
             myScript.UpdateMouth();
         }
+        if(GUILayout.Button("Update Pattern"))
+        {
+            myScript.UpdatePattern();
+        }
     }
 }
