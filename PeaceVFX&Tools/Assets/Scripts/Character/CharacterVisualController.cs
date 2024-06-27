@@ -32,6 +32,7 @@ public class CharacterVisualController : MonoBehaviour
     [SerializeField] List<Renderer> bodies;
     [Tooltip("How fast does the pattern change from one state to another")]
     [SerializeField] float changeTime;
+    [SerializeField] AnimationCurve changeCurve;
 
     // If currently in the process of changing then hold onto next
     // Overwrites this if multiple changes are requested 
@@ -50,8 +51,6 @@ public class CharacterVisualController : MonoBehaviour
 
     void Update()
     {
-        if (Application.isEditor)
-            return;
 
         if (emotionalState == holdState)
         {
@@ -83,7 +82,7 @@ public class CharacterVisualController : MonoBehaviour
             }
 
             EyeSettings settings = FindEyeSettings(emotionalState);
-            settings?.LoadAttributesIntoEye(eyes[i], eyes[i].material.shader, offset);
+            settings?.LoadAttributesIntoEye(eyes[i], eyes[i].sharedMaterial.shader, offset);
         }
     }
 
@@ -95,7 +94,7 @@ public class CharacterVisualController : MonoBehaviour
         for(int i = 0; i < mouths.Count; i++)
         {
             MouthSettings settings = FindMouthSettings(emotionalState);
-            settings?.LoadAttributesIntoMouth(mouths[i], mouths[i].material.shader, isTalking);
+            settings?.LoadAttributesIntoMouth(mouths[i], mouths[i].sharedMaterial.shader, isTalking);
         }
     }
 
@@ -140,11 +139,12 @@ public class CharacterVisualController : MonoBehaviour
             nextProps.patternAttributes.GeneratePropertyHelpers();
 
             // Lerp property values 
+            float lerp = timer / changeTime;
             ShaderProperties interpolatedProperties =
                 ShaderPropertyEdit.InterpolateProperties(
                     currProps.patternAttributes,
                     nextProps.patternAttributes,
-                    timer / changeTime);
+                    changeCurve.Evaluate(lerp));
 
             interpolatedProperties.GeneratePropertyHelpers();
             interpolated.patternAttributes = interpolatedProperties;
