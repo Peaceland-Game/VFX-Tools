@@ -276,7 +276,7 @@ Transform:
   - {fileID: 8538410419848160983}
   - {fileID: 8070236904871526567}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8267856919255090250
 MonoBehaviour:
@@ -10220,7 +10220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2681b86ab0346b945a2c1010ec99424b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 5535197526334902694}
+  glowRenderer: {fileID: 5535197526334902694}
   color: {r: 0.78431374, g: 0.41960785, b: 0.19607843, a: 0.3764706}
   intensityRange: {x: 0.3, y: 0.9}
   disRange: {x: 10, y: 250}

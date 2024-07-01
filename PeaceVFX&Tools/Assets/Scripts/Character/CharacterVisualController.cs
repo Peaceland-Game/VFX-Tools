@@ -9,7 +9,7 @@ using static ShaderPropertyEdit;
  * Peaceland Character Visual Controller
  * Created by Narai Risser
  * Mouth functionality added by William Duprey
- * Last updated 6/24/24
+ * Last updated 7/1/24
  */
 
 [ExecuteAlways]
@@ -162,8 +162,13 @@ public class CharacterVisualController : MonoBehaviour
                     nextProps.patternAttributes,
                     changeCurve.Evaluate(lerp));
 
+            // Need to create helpers before passing into attributes
             interpolatedProperties.GeneratePropertyHelpers();
             interpolated.patternAttributes = interpolatedProperties;
+
+            // Update timescale and dir 
+            currentTimeScale = Mathf.Lerp(currProps.timeScale, nextProps.timeScale, lerp);
+            currentDirction = Vector2.Lerp(currProps.patternDir, nextProps.patternDir, lerp);
 
             for(int i = 0; i < bodies.Count; i++)
             {
@@ -173,6 +178,9 @@ public class CharacterVisualController : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
+
+        currentTimeScale = nextProps.timeScale;
+        currentDirction = nextProps.patternDir;
 
         patternCoroutine = null;
     }
