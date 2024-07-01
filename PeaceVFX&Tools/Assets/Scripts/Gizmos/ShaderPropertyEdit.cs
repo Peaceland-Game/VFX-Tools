@@ -307,7 +307,6 @@ public class ShaderPropertyEdit : MonoBehaviour
 
                     break;
                 case ShaderPropertyType.Range:
-                    print(name);
                     SFloatRange rA = propertiesA.ranges[indexA].range;
                     SFloatRange rB = propertiesB.ranges[indexB].range;
 

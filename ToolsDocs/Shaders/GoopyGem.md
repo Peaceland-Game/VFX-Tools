@@ -6,9 +6,8 @@ The primary shader used to help visualize the characters for the game. This shad
 ## Variables
 | Name                      | Type             | Use                                                                                       |
 | ------------------------- | ---------------- | ----------------------------------------------------------------------------------------- |
-| TimeScale                 | Float            | Speed that the noise plays                                                                |
+| Times                     | Vec2             | The timescale on each axis. Acts as both timescale and direction of pattern               |
 | NoiseType                 | Float Range(0,1) | Interpolate range between voronoi and simple noise                                        |
-| PatternDirection          | Vector2          | Directions the noise flows                                                                |
 | Rescale                   | Float            | Extra scaling of noises                                                                   |
 | SimpleNoiseScale          | Float            | Scaling and simple noise density and sharpness                                            |
 | SimpleGradientThresholdA  | Float            | Min value used to change between secondary and highlight                                  |

@@ -1,8 +1,12 @@
 ![[ToolsCharacterVisualController.mp4]]
 
-The purpose of this script is to manage the visual state of the characters on the c# end so that it is easy and convenient for users to update character visual states and not get bogged down by shader manipulation. In its current state it can change the appearance of the character's eyes and mouth. (WIP: ability to shift between two visual patterns as seen across the character's body). 
+The purpose of this script is to manage the visual state of the characters on the c# end so that it is easy and convenient for users to update character visual states and not get bogged down by shader manipulation. In its current state it can change the appearance of the character's eyes, mouth, and body patterns. 
 
 In eye settings we are able to set the shader attributes of the eyes connected to the script. This allows us to store the shader properties used by the eye shader. To see more about the eye attributes data structure see [[ShaderPropertyEdit]]. 
+
+For the body pattern it follows a similar pattern as eye and the mouth but not all attributes of the body's material are included. This is on purpose as changing some settings does not either look natural and prove to be too drastic of a change making the character unrecognizable. You may also notice that timescale and direction are separate from the pattern attributes. This is also deliberate since time is managed  by the CharacterVisualController. We do this because using the Time node within shader graph is fine if the timescale and direction do not change. This is because changing the timescale with the shader managing time would change the image to a point as if it were always at the given timescale. This makes interpolating looking very chaotic and bad. With time being manage with C# we a cleaner way to change delta time rather than time as a whole. 
+
+![[TimeScale&PatternDir.png]]
 
 The state of the element relates to the emotional state that these attributes would be related to. There can be multiple elements of the same state but when the character chooses that emotional state, only the topmost element in the list will be used to update the material. 
 
