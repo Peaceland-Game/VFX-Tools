@@ -255,13 +255,14 @@ public class CharacterVisualController : MonoBehaviour
         public void LoadAttributesIntoEye(Renderer eyeRenderer, Shader shader, Vector3 cutoutOffset)
         {
             // Call the generic methods for loading shader properties for the material
-            ShaderPropertyEdit.GeneratePropertyHelpers(eyeAttributes, shader);
+            //ShaderPropertyEdit.GeneratePropertyHelpers(eyeAttributes, shader);
+            eyeAttributes.GeneratePropertyHelpers();
             ShaderPropertyEdit.LoadIntoMaterial(Application.isEditor ? eyeRenderer.sharedMaterial : eyeRenderer.material, eyeAttributes);
 
             // Update a specific property that the eyes have that allow the
             // cutout portion to be properly mirrored for left / right eyes.
             // Narai, I'm deeply sorry for defiling your beautiful tool.
-            eyeRenderer.material.SetVector("_CutoutCenterOffset", cutoutOffset);
+            eyeRenderer.sharedMaterial.SetVector("_CutoutCenterOffset", cutoutOffset);
         }
     }
 

@@ -393,8 +393,11 @@ public class ShaderPropertyEdit : MonoBehaviour
                 nameAndType.Add(new Tuple<string, ShaderPropertyType>(
                     colors[i].name,
                     ShaderPropertyType.Color));
+                if (nameToType.ContainsKey(colors[i].name))
+                    print(colors[i].name);
                 nameToType.Add(colors[i].name, ShaderPropertyType.Color);
 
+                
                 nameToIndex[colors[i].name] = i;
             }
 

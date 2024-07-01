@@ -53,7 +53,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReScale: 0.2
-    - _Rescale: 0.10084511
+    - _Rescale: 0.49899915
     - _Saturation: 1
     - _SecondaryMetallic: 0.8
     - _SecondarySmoothness: 0.5
@@ -79,14 +79,14 @@ Material:
     - _PatternDirection: {r: -1, g: -1, b: 0, a: 0}
     - _Primary: {r: 0.054901965, g: 0.62352943, b: 0.5921569, a: 1}
     - _Secondary: {r: 0, g: 0, b: 0, a: 1}
-    - _SimpleCenter: {r: -0.009315327, g: 0.045145217, b: 0, a: 0}
+    - _SimpleCenter: {r: -0.009315327, g: -0.1096109, b: 0, a: 0}
     - _SimpleDirection: {r: 1, g: 1, b: 0, a: 0}
     - _SimpleSize: {r: 0.8366008, g: 0.95222616, b: 0, a: 0}
     - _TimeScale: {r: -0.1, g: 0.15, b: 0, a: 0}
-    - _Times: {r: 0, g: 4.927052, b: 0, a: 0}
-    - _VoronoiCenter: {r: 0.08721997, g: 0.2741839, b: 0, a: 0}
+    - _Times: {r: 0, g: 0, b: 0, a: 0}
+    - _VoronoiCenter: {r: 0.00021874507, g: 0.000687645, b: 0, a: 0}
     - _VoronoiDirection: {r: -1, g: 1, b: 0, a: 0}
-    - _VoronoiSize: {r: 0.5389208, g: 0.2572227, b: 0, a: 0}
+    - _VoronoiSize: {r: 0.25072443, g: 0.25001803, b: 0, a: 0}
     - _goopSize: {r: 0.3, g: 0.38, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1470165066475881991
