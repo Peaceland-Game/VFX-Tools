@@ -2973,13 +2973,13 @@
     "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
     "m_ObjectId": "41f9fcbb9d374d7fb70d31ae41c9cf60",
     "m_Title": "",
-    "m_Content": "Mostly just following through Narai's eye shader as I make this one. I think I might understand things.",
+    "m_Content": "Mouth Shader by William Duprey\n\nMostly just following through Narai's eye shader as I make this one. I think I might understand things.",
     "m_TextSize": 0,
     "m_Theme": 0,
     "m_Position": {
         "serializedVersion": "2",
-        "x": -2654.0,
-        "y": -454.6666564941406,
+        "x": -3054.66650390625,
+        "y": -473.33331298828127,
         "width": 200.0,
         "height": 160.0
     },

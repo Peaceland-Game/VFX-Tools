@@ -217,7 +217,7 @@ public class CharacterVisualController : MonoBehaviour
             }
         }
 
-        // Mouth not found
+        // Pattern not found
         Debug.LogWarning("Pattern state " + state + " not found");
         return null;
     }
