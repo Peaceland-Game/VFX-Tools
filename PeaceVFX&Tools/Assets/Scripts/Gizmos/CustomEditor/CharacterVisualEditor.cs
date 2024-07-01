@@ -15,6 +15,7 @@ public class CharacterVisualEditor : Editor
         {
             myScript.UpdateEyes();
             myScript.UpdateMouth();
+            myScript.UpdatePattern();
         }
         // TODO: Figure out how to add a folder / dropdown thing for these buttons
         if (GUILayout.Button("Update Eyes"))
