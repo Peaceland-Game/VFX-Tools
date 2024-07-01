@@ -28,11 +28,15 @@ public class CharacterVisualController : MonoBehaviour
     [SerializeField] List<MouthSettings> mouthSettings;
 
     [Header("Pattern")]
+    [SerializeField] float currentTimeScale;
+    [SerializeField] Vector2 currentDirction; 
     [SerializeField] List<PatternSettings> patterns;
     [SerializeField] List<Renderer> bodies;
     [Tooltip("How fast does the pattern change from one state to another")]
     [SerializeField] float changeTime;
     [SerializeField] AnimationCurve changeCurve;
+
+    private Vector2 currentTimes;
 
     // If currently in the process of changing then hold onto next
     // Overwrites this if multiple changes are requested 
@@ -51,7 +55,19 @@ public class CharacterVisualController : MonoBehaviour
 
     void Update()
     {
+        Vector2 dir = currentDirction.normalized;
+        currentTimes += Time.deltaTime * currentTimeScale * dir;
 
+        // Pass in manual material properties 
+        for (int i = 0; i < bodies.Count; i++)
+        {
+            Renderer renderer = bodies[i];
+            renderer.sharedMaterial.SetVector("_Times", currentTimes);
+        }
+        
+
+
+        // State changes 
         if (emotionalState == holdState)
         {
             return;
@@ -275,6 +291,15 @@ public class CharacterVisualController : MonoBehaviour
     private class PatternSettings
     {
         [SerializeField] public EmotionalState state;
+
+        // NOTE: Some attributes need to be changed and set
+        //       in a custom manner instead of using shader
+        //       properties. This is because not everything
+        //       is being managed within the material but 
+        //       only passed in via C# 
+
+        [SerializeField] public float timeScale;
+        [SerializeField] public Vector2 patternDir; 
         [SerializeField] public ShaderPropertyEdit.ShaderProperties patternAttributes;
        
         public void LoadAttributesIntoPattern(Renderer bodyRenderer, Shader shader)
