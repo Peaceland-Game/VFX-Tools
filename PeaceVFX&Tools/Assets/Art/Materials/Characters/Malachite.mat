@@ -46,7 +46,7 @@ Material:
     - _GradientThresholdA: 0.33
     - _GradientThresholdB: 0.48
     - _Metallic: 0
-    - _NoiseType: 1
+    - _NoiseType: 0.9999747
     - _PrimaryMetallic: 0.1
     - _PrimarySmoothness: 0
     - _QueueControl: 0
@@ -65,8 +65,8 @@ Material:
     - _TimeScale: 0.1
     - _VertexAngleOffset: 7.0390925
     - _VertexCellDensity: 1.4801598
-    - _VoronoiGradientThresholdA: 0.4
-    - _VoronoiGradientThresholdB: 0.45
+    - _VoronoiGradientThresholdA: 0.4409516
+    - _VoronoiGradientThresholdB: 0.7764367
     - _angleOffset: 2
     - _cellDensity: 5
     - _noiseScale: 0.63
@@ -82,9 +82,9 @@ Material:
     - _SimpleDirection: {r: 1, g: 1, b: 0, a: 0}
     - _SimpleSize: {r: 0.8366008, g: 0.95222616, b: 0, a: 0}
     - _TimeScale: {r: -0.1, g: 0.15, b: 0, a: 0}
-    - _VoronoiCenter: {r: 0, g: 0.1, b: 0, a: 0}
+    - _VoronoiCenter: {r: 0.08721398, g: -0.10994688, b: 0, a: 0}
     - _VoronoiDirection: {r: -1, g: 1, b: 0, a: 0}
-    - _VoronoiSize: {r: 0.75, g: 0.5, b: 0, a: 0}
+    - _VoronoiSize: {r: 0.53896296, g: 0.2572486, b: 0, a: 0}
     - _goopSize: {r: 0.3, g: 0.38, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1470165066475881991

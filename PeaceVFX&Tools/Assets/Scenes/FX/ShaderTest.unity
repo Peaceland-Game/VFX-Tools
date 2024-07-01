@@ -22551,20 +22551,20 @@ Material:
     - _EmissionMultiplier: 0.2
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _TalkSpeed: 0.3
+    - _TalkSpeed: 0.1
     - _WobbleDistance: 0.05
-    - _WobbleSpeed: 0.6
+    - _WobbleSpeed: 0.2
     m_Colors:
-    - _MouthBaseSize: {r: 0.4, g: 0.05, b: 0, a: 0}
+    - _MouthBaseSize: {r: 0.3, g: 0.05, b: 0, a: 0}
     - _MouthCenter: {r: 0, g: -0.05, b: 0, a: 0}
     - _MouthColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
     - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
     - _OutlineThickness: {r: 0.03, g: 0.03, b: 0, a: 0}
-    - _SilentMouthSize: {r: 0.4, g: 0.02, b: 0, a: 0}
+    - _SilentMouthSize: {r: 0.2, g: 0.01, b: 0, a: 0}
     - _TalkScale: {r: 10, g: 10, b: 0, a: 0}
-    - _TalkXRange: {r: 0.5, g: 1, b: 0, a: 0}
-    - _TalkYRange: {r: 0.2, g: 5, b: 0, a: 0}
-    - _WobbleScale: {r: 0, g: 10, b: 0, a: 0}
+    - _TalkXRange: {r: 0.3, g: 1, b: 0, a: 0}
+    - _TalkYRange: {r: 0.1, g: 2, b: 0, a: 0}
+    - _WobbleScale: {r: 0, g: 3, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!1001 &408501281
 PrefabInstance:
@@ -43637,17 +43637,17 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0
-    - _WobbleDistance: 0.02
-    - _WobbleSpeed: 5
+    - _WobbleDistance: 0.05
+    - _WobbleSpeed: 0.4
     m_Colors:
-    - _CutoutCenter: {r: 0.07, g: 0.12, b: 0, a: 0}
+    - _CutoutCenter: {r: 0, g: 0.12, b: 0, a: 0}
     - _CutoutCenterOffset: {r: 1, g: 1, b: 1, a: 0}
     - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
     - _EyeColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
-    - _EyeSize: {r: 0.1, g: 0.09, b: 0, a: 0}
+    - _EyeSize: {r: 0.09, g: 0.09, b: 0, a: 0}
     - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
-    - _OutlineSize: {r: 0.11, g: 0.095, b: 0, a: 0}
-    - _WobbleScale: {r: 1, g: 1.5, b: 0, a: 0}
+    - _OutlineSize: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _WobbleScale: {r: 0.1, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!1001 &940307352
 PrefabInstance:
@@ -50590,17 +50590,17 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0
-    - _WobbleDistance: 0.02
-    - _WobbleSpeed: 5
+    - _WobbleDistance: 0.05
+    - _WobbleSpeed: 0.4
     m_Colors:
-    - _CutoutCenter: {r: 0.07, g: 0.12, b: 0, a: 0}
+    - _CutoutCenter: {r: 0, g: 0.12, b: 0, a: 0}
     - _CutoutCenterOffset: {r: -1, g: 1, b: 1, a: 0}
     - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
     - _EyeColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
-    - _EyeSize: {r: 0.1, g: 0.09, b: 0, a: 0}
+    - _EyeSize: {r: 0.09, g: 0.09, b: 0, a: 0}
     - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
-    - _OutlineSize: {r: 0.11, g: 0.095, b: 0, a: 0}
-    - _WobbleScale: {r: 1, g: 1.5, b: 0, a: 0}
+    - _OutlineSize: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _WobbleScale: {r: 0.1, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!1 &1558281688
 GameObject:
@@ -55679,7 +55679,7 @@ PrefabInstance:
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: emotionalState
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -55994,7 +55994,7 @@ PrefabInstance:
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: patterns.Array.data[0].patternAttributes.ranges.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -56003,8 +56003,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: patterns.Array.data[1].patternAttributes.ranges.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: patterns.Array.data[2].patternAttributes.floats.Array.size
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[2].patternAttributes.ranges.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -56013,8 +56023,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: patterns.Array.data[3].patternAttributes.ranges.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: patterns.Array.data[4].patternAttributes.floats.Array.size
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[4].patternAttributes.ranges.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -56023,8 +56043,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: patterns.Array.data[5].patternAttributes.ranges.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: patterns.Array.data[6].patternAttributes.floats.Array.size
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[6].patternAttributes.ranges.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -56604,7 +56634,7 @@ PrefabInstance:
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: patterns.Array.data[0].patternAttributes.ranges.Array.data[0].name
-      value: _Saturation
+      value: _NoiseType
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -56663,6 +56693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: patterns.Array.data[1].patternAttributes.ranges.Array.data[0].name
+      value: _NoiseType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: patterns.Array.data[2].patternAttributes.floats.Array.data[0].name
       value: _SimpleGradientThresholdA
       objectReference: {fileID: 0}
@@ -56700,6 +56735,11 @@ PrefabInstance:
         type: 3}
       propertyPath: patterns.Array.data[2].patternAttributes.floats.Array.data[7].name
       value: _VertexAngleOffset
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[2].patternAttributes.ranges.Array.data[0].name
+      value: _NoiseType
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -56743,6 +56783,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: patterns.Array.data[3].patternAttributes.ranges.Array.data[0].name
+      value: _NoiseType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: patterns.Array.data[4].patternAttributes.floats.Array.data[0].name
       value: _SimpleGradientThresholdA
       objectReference: {fileID: 0}
@@ -56780,6 +56825,11 @@ PrefabInstance:
         type: 3}
       propertyPath: patterns.Array.data[4].patternAttributes.floats.Array.data[7].name
       value: _VertexAngleOffset
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[4].patternAttributes.ranges.Array.data[0].name
+      value: _NoiseType
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -56823,6 +56873,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: patterns.Array.data[5].patternAttributes.ranges.Array.data[0].name
+      value: _NoiseType
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: patterns.Array.data[6].patternAttributes.floats.Array.data[0].name
       value: _SimpleGradientThresholdA
       objectReference: {fileID: 0}
@@ -56860,6 +56915,11 @@ PrefabInstance:
         type: 3}
       propertyPath: patterns.Array.data[6].patternAttributes.floats.Array.data[7].name
       value: _VertexAngleOffset
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[6].patternAttributes.ranges.Array.data[0].name
+      value: _NoiseType
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -58619,7 +58679,7 @@ PrefabInstance:
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: patterns.Array.data[0].patternAttributes.ranges.Array.data[0].range.min
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -58718,6 +58778,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: patterns.Array.data[1].patternAttributes.ranges.Array.data[0].range.max
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: patterns.Array.data[1].patternAttributes.vectors.Array.data[0].vector.x
       value: -0.009315327
       objectReference: {fileID: 0}
@@ -58755,6 +58820,11 @@ PrefabInstance:
         type: 3}
       propertyPath: patterns.Array.data[1].patternAttributes.vectors.Array.data[3].vector.y
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[2].patternAttributes.ranges.Array.data[0].range.max
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -58798,6 +58868,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: patterns.Array.data[3].patternAttributes.ranges.Array.data[0].range.max
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: patterns.Array.data[3].patternAttributes.vectors.Array.data[0].vector.x
       value: -0.009315327
       objectReference: {fileID: 0}
@@ -58835,6 +58910,11 @@ PrefabInstance:
         type: 3}
       propertyPath: patterns.Array.data[3].patternAttributes.vectors.Array.data[3].vector.y
       value: 0.2571872
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[4].patternAttributes.ranges.Array.data[0].range.max
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -58878,6 +58958,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
+      propertyPath: patterns.Array.data[5].patternAttributes.ranges.Array.data[0].range.max
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
       propertyPath: patterns.Array.data[5].patternAttributes.vectors.Array.data[0].vector.x
       value: -0.009315327
       objectReference: {fileID: 0}
@@ -58915,6 +59000,11 @@ PrefabInstance:
         type: 3}
       propertyPath: patterns.Array.data[5].patternAttributes.vectors.Array.data[3].vector.y
       value: 0.2571872
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[6].patternAttributes.ranges.Array.data[0].range.max
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -59484,12 +59574,42 @@ PrefabInstance:
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: patterns.Array.data[0].patternAttributes.ranges.Array.data[0].range.value
-      value: 0.8055749
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
       propertyPath: patterns.Array.data[0].patternAttributes.ranges.Array.data[1].range.value
       value: 0.8055749
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[1].patternAttributes.ranges.Array.data[0].range.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[2].patternAttributes.ranges.Array.data[0].range.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[3].patternAttributes.ranges.Array.data[0].range.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[4].patternAttributes.ranges.Array.data[0].range.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[5].patternAttributes.ranges.Array.data[0].range.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: patterns.Array.data[6].patternAttributes.ranges.Array.data[0].range.value
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
         type: 3}
@@ -62583,12 +62703,12 @@ PrefabInstance:
     - target: {fileID: 6865110348543519408, guid: efc6d989ecf1b1448b54b3317d87b1dc,
         type: 3}
       propertyPath: m_Range
-      value: 2.6041808
+      value: 2.789198
       objectReference: {fileID: 0}
     - target: {fileID: 6865110348543519408, guid: efc6d989ecf1b1448b54b3317d87b1dc,
         type: 3}
       propertyPath: m_Intensity
-      value: 0.39305463
+      value: 0.38072014
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
