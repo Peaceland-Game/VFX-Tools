@@ -139,6 +139,11 @@ public class CharacterVisualController : MonoBehaviour
         patternCoroutine = StartCoroutine(ChangePatternCo(holdState, emotionalState));
     }
 
+    public void ChangeEmotionalState(EmotionalState next)
+    {
+        emotionalState = next;
+    }
+
     private IEnumerator ChangePatternCo(EmotionalState currentState, EmotionalState nextState)
     {
         float timer = 0.0f;
@@ -320,7 +325,7 @@ public class CharacterVisualController : MonoBehaviour
     }
 
 
-    private enum EmotionalState
+    public enum EmotionalState
     {
         CONTENT,
         SLEEPY,
