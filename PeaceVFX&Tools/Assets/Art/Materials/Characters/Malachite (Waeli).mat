@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Malachite
+  m_Name: Malachite (Waeli)
   m_Shader: {fileID: -6465566751694194690, guid: 2de933b20859e28468c965c7119810ab,
     type: 3}
   m_Parent: {fileID: 0}
@@ -53,7 +53,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReScale: 0.2
-    - _Rescale: 0.20999348
+    - _Rescale: 0.06500626
     - _Saturation: 1
     - _SecondaryMetallic: 0.8
     - _SecondarySmoothness: 0.5
@@ -66,8 +66,8 @@ Material:
     - _TimeScale: 0.1
     - _VertexAngleOffset: 7.0390925
     - _VertexCellDensity: 1.4801598
-    - _VoronoiGradientThresholdA: 0.34000602
-    - _VoronoiGradientThresholdB: 0.7700004
+    - _VoronoiGradientThresholdA: 0.22012538
+    - _VoronoiGradientThresholdB: 0.67
     - _angleOffset: 2
     - _cellDensity: 5
     - _noiseScale: 0.63
@@ -79,14 +79,14 @@ Material:
     - _PatternDirection: {r: -1, g: -1, b: 0, a: 0}
     - _Primary: {r: 0.054901965, g: 0.62352943, b: 0.5921569, a: 1}
     - _Secondary: {r: 0, g: 0, b: 0, a: 1}
-    - _SimpleCenter: {r: -0.009315327, g: -0.11, b: 0, a: 0}
+    - _SimpleCenter: {r: -0.00001167885, g: -0.25981194, b: 0, a: 0}
     - _SimpleDirection: {r: 1, g: 1, b: 0, a: 0}
-    - _SimpleSize: {r: 0.8366008, g: 0.95222616, b: 0, a: 0}
+    - _SimpleSize: {r: 1.988554, g: 1.4893258, b: 0, a: 0}
     - _TimeScale: {r: -0.1, g: 0.15, b: 0, a: 0}
-    - _Times: {r: 0, g: 0, b: 0, a: 0}
-    - _VoronoiCenter: {r: 0.0000051996735, g: -0.06000298, b: 0, a: 0}
+    - _Times: {r: -500.26654, g: -65.07688, b: 0, a: 0}
+    - _VoronoiCenter: {r: 0, g: -0.02, b: 0, a: 0}
     - _VoronoiDirection: {r: -1, g: 1, b: 0, a: 0}
-    - _VoronoiSize: {r: 0.170022, g: 0.23000163, b: 0, a: 0}
+    - _VoronoiSize: {r: 0.24998747, g: 0.18, b: 0, a: 0}
     - _goopSize: {r: 0.3, g: 0.38, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1470165066475881991
