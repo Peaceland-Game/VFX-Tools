@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Malachite (Waeli)
+  m_Name: Malachite (Cylo, Women & Patron)
   m_Shader: {fileID: -6465566751694194690, guid: 2de933b20859e28468c965c7119810ab,
     type: 3}
   m_Parent: {fileID: 0}
@@ -38,7 +38,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AngleOffset: 34.9154
+    - _AngleOffset: 34.848442
     - _CellDensity: 7.632326
     - _CurrentTime: 1
     - _DisTimeScale: 0.12524334
@@ -53,7 +53,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReScale: 0.2
-    - _Rescale: 0.065
+    - _Rescale: 0.10013902
     - _Saturation: 1
     - _SecondaryMetallic: 0.8
     - _SecondarySmoothness: 0.5
@@ -66,8 +66,8 @@ Material:
     - _TimeScale: 0.1
     - _VertexAngleOffset: 7.0390925
     - _VertexCellDensity: 1.4801598
-    - _VoronoiGradientThresholdA: 0.22
-    - _VoronoiGradientThresholdB: 0.67
+    - _VoronoiGradientThresholdA: 0.3402005
+    - _VoronoiGradientThresholdB: 0.630291
     - _angleOffset: 2
     - _cellDensity: 5
     - _noiseScale: 0.63
@@ -79,14 +79,14 @@ Material:
     - _PatternDirection: {r: -1, g: -1, b: 0, a: 0}
     - _Primary: {r: 0.054901965, g: 0.62352943, b: 0.5921569, a: 1}
     - _Secondary: {r: 0, g: 0, b: 0, a: 1}
-    - _SimpleCenter: {r: 0, g: -0.26, b: 0, a: 0}
+    - _SimpleCenter: {r: -0.009315327, g: -0.11, b: 0, a: 0}
     - _SimpleDirection: {r: 1, g: 1, b: 0, a: 0}
-    - _SimpleSize: {r: 1.99, g: 1.49, b: 0, a: 0}
+    - _SimpleSize: {r: 0.83702457, g: 0.9525792, b: 0, a: 0}
     - _TimeScale: {r: -0.1, g: 0.15, b: 0, a: 0}
-    - _Times: {r: -53.755936, g: -52.252953, b: 0, a: 0}
-    - _VoronoiCenter: {r: 0, g: -0.02, b: 0, a: 0}
+    - _Times: {r: 26.868408, g: -79.88306, b: 0, a: 0}
+    - _VoronoiCenter: {r: -0.25876868, g: -0.439007, b: 0, a: 0}
     - _VoronoiDirection: {r: -1, g: 1, b: 0, a: 0}
-    - _VoronoiSize: {r: 0.25, g: 0.18, b: 0, a: 0}
+    - _VoronoiSize: {r: 0.839402, g: 0.71057594, b: 0, a: 0}
     - _goopSize: {r: 0.3, g: 0.38, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1470165066475881991
