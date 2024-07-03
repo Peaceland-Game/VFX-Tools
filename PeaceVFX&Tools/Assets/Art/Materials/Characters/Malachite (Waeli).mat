@@ -83,7 +83,7 @@ Material:
     - _SimpleDirection: {r: 1, g: 1, b: 0, a: 0}
     - _SimpleSize: {r: 1.99, g: 1.49, b: 0, a: 0}
     - _TimeScale: {r: -0.1, g: 0.15, b: 0, a: 0}
-    - _Times: {r: -185.10497, g: -65.38899, b: 0, a: 0}
+    - _Times: {r: -307.97757, g: -77.672844, b: 0, a: 0}
     - _VoronoiCenter: {r: 0, g: -0.02, b: 0, a: 0}
     - _VoronoiDirection: {r: -1, g: 1, b: 0, a: 0}
     - _VoronoiSize: {r: 0.25, g: 0.18, b: 0, a: 0}
