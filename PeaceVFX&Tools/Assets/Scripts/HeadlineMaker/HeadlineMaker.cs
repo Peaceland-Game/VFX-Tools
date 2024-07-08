@@ -16,9 +16,10 @@ public class HeadlineMaker : MonoBehaviour
 
     [SerializeField] GameObject topicElement;
     [SerializeField] GameObject noteElement;
+    [SerializeField] GameObject headlineElement; 
     [SerializeField] Transform topicsParent;
     [SerializeField] Transform notesParent;
-    [SerializeField] TextMeshProUGUI headlineTextMesh;
+    [SerializeField] Transform headlineParent;
     [Space]
     [SerializeField] List<TopicData> topics;
 
@@ -28,7 +29,7 @@ public class HeadlineMaker : MonoBehaviour
     [SerializeField] int selectedTopic = -1; 
     [SerializeField] int selectedNote = -1;
 
-    [Header("Animation")]
+    [Header("Animation Pages")]
     [SerializeField] List<RectTransform> pages;
     [SerializeField] float heightOffset;
     [SerializeField] float appearTime;
@@ -39,6 +40,12 @@ public class HeadlineMaker : MonoBehaviour
     [Space]
     [SerializeField] float btnAppearTime;
     [SerializeField] float btnAppearOffset;
+    [Header("Animation Header")]
+    [SerializeField] Vector3 headerPos;
+    [SerializeField] float headerAppearTime; 
+
+    // Current header page
+    private GameObject headerHold; 
 
     private void Start()
     {
@@ -125,8 +132,16 @@ public class HeadlineMaker : MonoBehaviour
             return;
 
         Note note = topic.notes[selectedNote];
-        headlineTextMesh.text = note.headline;
-    }
+
+        if (headerHold != null)
+            Destroy(headerHold);
+
+        GameObject temp = Instantiate(headlineElement, Vector3.zero, Quaternion.identity, headlineParent);
+        temp.GetComponent<RectTransform>().localPosition = headerPos;
+        headlineElement.GetComponentInChildren<TextMeshProUGUI>().text = note.headline;
+
+        headerHold = temp;
+    } 
 
     /// <summary>
     /// Generates a headline based on a note's idnex
@@ -288,6 +303,24 @@ public class HeadlineMaker : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
+    }
+
+    /// <summary>
+    /// Aniamtes the headline page as if tossed 
+    /// onto the screen 
+    /// </summary>
+    /// <param name="page"></param>
+    /// <returns></returns>
+    private IEnumerator AppearHeadline(RectTransform page)
+    {
+        float timer = 0.0f;
+
+        while(timer < headerAppearTime)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
     }
 
     /// <summary>
