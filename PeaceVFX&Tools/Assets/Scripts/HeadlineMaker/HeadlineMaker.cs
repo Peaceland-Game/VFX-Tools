@@ -134,12 +134,15 @@ public class HeadlineMaker : MonoBehaviour
         Note note = topic.notes[selectedNote];
 
         if (headerHold != null)
+        {
             Destroy(headerHold);
+        }
+        print(selectedNote);
 
         GameObject temp = Instantiate(headlineElement, Vector3.zero, Quaternion.identity, headlineParent);
         temp.GetComponent<RectTransform>().localPosition = headerPos;
-        headlineElement.GetComponentInChildren<TextMeshProUGUI>().text = note.headline;
-
+        temp.GetComponentInChildren<TextMeshProUGUI>().text = note.headline;
+        
         headerHold = temp;
     } 
 
@@ -150,7 +153,6 @@ public class HeadlineMaker : MonoBehaviour
     public void GenerateHeadline(int index)
     {
         selectedNote = index;
-
         GenerateHeadline();
     }
 

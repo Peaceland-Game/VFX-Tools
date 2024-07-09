@@ -1186,13 +1186,13 @@ MonoBehaviour:
   - topic: 3
     notes:
     - description: You supported Waeli and Grypth when Antoni appeared
-      headline: ???
+      headline: Fighting for Friendship in a Time of Tension
     - description: You stood by Waeli in the GPK
-      headline: ???
+      headline: Unlikely Friends made by Caring for Strays
     - description: Despite all the odds Kaylin was determined to get back to Gryph
-      headline: ???
+      headline: How unlikely friends are upporting each other in an era of "Peacekeeping"
     - description: You stood up for Waeli and Astoni in front of your parents
-      headline: ???
+      headline: 'Where older generations are stuck, the kids are succeeding '
   - topic: 4
     notes:
     - description: You were weary of petting the dog
@@ -1247,6 +1247,7 @@ MonoBehaviour:
   btnAppearTime: 0.1
   btnAppearOffset: 0.1
   headerPos: {x: 308.2, y: 0.0000083447, z: 0}
+  headerAppearTime: 0
 --- !u!224 &1368682274 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7393470631719425038, guid: 0a217fa01d9d3c54db49c1865b8fe440,
