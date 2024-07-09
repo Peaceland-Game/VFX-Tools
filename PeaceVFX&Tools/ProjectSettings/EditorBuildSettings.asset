@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FinalScene.unity
     guid: 5ef506344cb3fae47937921112e4f745
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FX/Tree.unity
     guid: 68d6a475ee6495c46a8c8b149f1118c0
+  - enabled: 1
+    path: Assets/Scenes/UI/HeadlineMaker.unity
+    guid: b676c78c5b9a12d49ac2f0b7a76be58c
   m_configObjects: {}

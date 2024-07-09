@@ -290,17 +290,17 @@ public class HeadlineMaker : MonoBehaviour
     /// </summary>
     /// <param name="page"></param>
     /// <returns></returns>
-    private IEnumerator AppearPage(RectTransform page)
+    private IEnumerator AppearPage(Transform page)
     {
         float timer = 0.0f;
         
-        float startPos = page.position.y + heightOffset;
-        float targetPos = page.position.y;
+        float startPos = page.localPosition.y + heightOffset;
+        float targetPos = page.localPosition.y;
 
         while (timer <= appearTime)
         {
             float lerp = appearCurve.Evaluate( timer / appearTime);
-            page.position = new Vector3(page.position.x, Mathf.Lerp(startPos, targetPos, lerp), page.position.z);
+            page.localPosition = new Vector3(page.localPosition.x, Mathf.Lerp(startPos, targetPos, lerp), page.localPosition.z);
 
             timer += Time.deltaTime;
             yield return null;
