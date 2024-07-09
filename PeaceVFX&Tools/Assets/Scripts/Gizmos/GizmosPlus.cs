@@ -1,7 +1,6 @@
 using System.Drawing;
 using System.Reflection;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class GizmosPlus : MonoBehaviour
 {

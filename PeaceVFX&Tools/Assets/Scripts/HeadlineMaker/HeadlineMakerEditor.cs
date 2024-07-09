@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+#if (UNITY_EDITOR)
 [CustomEditor(typeof(HeadlineMaker)), CanEditMultipleObjects]
 public class HeadlineMakerEditor : Editor
 {
@@ -30,3 +31,4 @@ public class HeadlineMakerEditor : Editor
         }
     }
 }
+#endif

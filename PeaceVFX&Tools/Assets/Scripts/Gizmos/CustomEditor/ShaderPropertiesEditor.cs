@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+#if (UNITY_EDITOR)
 [CustomEditor(typeof(ShaderPropertyEdit))]
 public class ShaderPropertiesEditor : Editor
 {
@@ -29,3 +30,4 @@ public class ShaderPropertiesEditor : Editor
         }
     }
 }
+#endif

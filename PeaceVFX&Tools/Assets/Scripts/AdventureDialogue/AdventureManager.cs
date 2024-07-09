@@ -83,6 +83,8 @@ public class AdventureManager : MonoBehaviour
 
         currentZone = zone;
 
+        nameText.text = zone.name;
+
         // If only one line of dialogue immediatly generate choices 
         if (zone.dialogue.Count == 0 || zone.dialogue.Count == 1)
             GenerateChoices();
