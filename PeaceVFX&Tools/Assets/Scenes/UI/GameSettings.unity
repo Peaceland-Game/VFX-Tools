@@ -155,6 +155,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576d8fc5601ca544cb12fed5952a820e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sections:
+  - title: Audio
+    sectionSettings: {fileID: 0}
+  - title: Gameplay
+    sectionSettings: {fileID: 0}
+  - title: Keybindings
+    sectionSettings: {fileID: 0}
+  - title: Accessability
+    sectionSettings: {fileID: 0}
+  - title: Other
+    sectionSettings: {fileID: 0}
 --- !u!114 &27171343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +244,7 @@ RectTransform:
   - {fileID: 142298698}
   - {fileID: 1597858501}
   - {fileID: 790255567}
+  - {fileID: 2071741442}
   - {fileID: 503399534}
   - {fileID: 1488773353}
   - {fileID: 1780277840}
@@ -303,7 +315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choice A
+  m_text: ACCESSABILITY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1cfec8a36bcd16844a2f5d24d52a6d79, type: 2}
   m_sharedMaterial: {fileID: -3018059740105092714, guid: 1cfec8a36bcd16844a2f5d24d52a6d79,
@@ -341,7 +353,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -515,7 +527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choice A
+  m_text: GAMEPLAY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1cfec8a36bcd16844a2f5d24d52a6d79, type: 2}
   m_sharedMaterial: {fileID: -3018059740105092714, guid: 1cfec8a36bcd16844a2f5d24d52a6d79,
@@ -553,7 +565,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -651,7 +663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choice A
+  m_text: KEYBINDINGS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1cfec8a36bcd16844a2f5d24d52a6d79, type: 2}
   m_sharedMaterial: {fileID: -3018059740105092714, guid: 1cfec8a36bcd16844a2f5d24d52a6d79,
@@ -689,7 +701,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -989,7 +1001,7 @@ GameObject:
   - component: {fileID: 486117279}
   - component: {fileID: 486117278}
   m_Layer: 5
-  m_Name: DefaultButton (3)
+  m_Name: Accessability Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1060,7 +1072,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 486117279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 27171342}
+        m_TargetAssemblyTypeName: UISettings, Assembly-CSharp
+        m_MethodName: LoadSection
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2071741441}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &486117279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,7 +1272,7 @@ GameObject:
   - component: {fileID: 790255568}
   - component: {fileID: 790255570}
   m_Layer: 5
-  m_Name: SectionSettings
+  m_Name: GameplaySettings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1511,7 +1535,7 @@ GameObject:
   - component: {fileID: 1073020023}
   - component: {fileID: 1073020022}
   m_Layer: 5
-  m_Name: DefaultButton (2)
+  m_Name: Keybindings Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1582,7 +1606,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1073020023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 27171342}
+        m_TargetAssemblyTypeName: UISettings, Assembly-CSharp
+        m_MethodName: LoadSection
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2071741441}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1073020023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1716,7 +1752,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1837,7 +1873,7 @@ GameObject:
   - component: {fileID: 1098794901}
   - component: {fileID: 1098794900}
   m_Layer: 5
-  m_Name: DefaultButton (4)
+  m_Name: Other Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1908,7 +1944,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1098794901}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 27171342}
+        m_TargetAssemblyTypeName: UISettings, Assembly-CSharp
+        m_MethodName: LoadSection
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2071741441}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1098794901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2042,7 +2090,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2391,7 +2439,7 @@ GameObject:
   - component: {fileID: 1483071464}
   - component: {fileID: 1483071463}
   m_Layer: 5
-  m_Name: DefaultButton (1)
+  m_Name: Gameplay Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2462,7 +2510,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1483071464}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 27171342}
+        m_TargetAssemblyTypeName: UISettings, Assembly-CSharp
+        m_MethodName: LoadSection
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 790255566}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1483071464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2590,7 +2650,7 @@ GameObject:
   - component: {fileID: 1597858502}
   - component: {fileID: 1597858504}
   m_Layer: 5
-  m_Name: Sections
+  m_Name: SectionsButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2806,6 +2866,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780277839}
   m_CullTransparentMesh: 1
+--- !u!1 &2071741441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2071741442}
+  - component: {fileID: 2071741445}
+  - component: {fileID: 2071741444}
+  - component: {fileID: 2071741443}
+  m_Layer: 5
+  m_Name: EmptySettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2071741442
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071741441}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 27171346}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 126.31955, y: -23.071981}
+  m_SizeDelta: {x: 450.3936, y: 326.2548}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2071741443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071741441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 47
+    m_Right: 0
+    m_Top: 16
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 1
+  m_CellSize: {x: 208.29, y: 20}
+  m_Spacing: {x: 0, y: 16}
+  m_Constraint: 0
+  m_ConstraintCount: 2
+--- !u!114 &2071741444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071741441}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.103773594, g: 0.0926783, b: 0.0926783, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2071741445
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071741441}
+  m_CullTransparentMesh: 1
 --- !u!1 &2116929578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,7 +3025,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choice A
+  m_text: OTHER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1cfec8a36bcd16844a2f5d24d52a6d79, type: 2}
   m_sharedMaterial: {fileID: -3018059740105092714, guid: 1cfec8a36bcd16844a2f5d24d52a6d79,
@@ -2902,7 +3063,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -3183,7 +3344,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8772792252995570776}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 27171342}
+        m_TargetAssemblyTypeName: UISettings, Assembly-CSharp
+        m_MethodName: LoadSection
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2071741441}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5967176329285462240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,7 +3370,7 @@ GameObject:
   - component: {fileID: 8772792252995570776}
   - component: {fileID: 5709332902408879550}
   m_Layer: 5
-  m_Name: DefaultButton
+  m_Name: AudioButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3279,7 +3452,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choice A
+  m_text: AUDIO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1cfec8a36bcd16844a2f5d24d52a6d79, type: 2}
   m_sharedMaterial: {fileID: -3018059740105092714, guid: 1cfec8a36bcd16844a2f5d24d52a6d79,
@@ -3317,7 +3490,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

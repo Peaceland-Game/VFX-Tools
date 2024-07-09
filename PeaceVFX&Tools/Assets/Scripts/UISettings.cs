@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class UISettings : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] List<Section> sections;
+
+    private GameObject holdObject;
+
+    private void Start()
     {
-        
+        LoadSection(holdObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Swaps which section is currently active 
+    /// </summary>
+    /// <param name="section"></param>
+    public void LoadSection(GameObject section)
     {
+        if(holdObject != null)
+            holdObject.SetActive(false);
         
+        if(section != null)
+            section.SetActive(true);
+
+        holdObject = section;
+}
+
+    [System.Serializable]
+    private class Section
+    {
+        [SerializeField] string title;
+        [SerializeField] public GameObject sectionSettings;
     }
 }
