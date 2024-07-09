@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TreeHub.unity
     guid: 907f9c114d1169046b02a2e66845265f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FinalScene.unity
     guid: 5ef506344cb3fae47937921112e4f745
+  - enabled: 1
+    path: Assets/Scenes/UI/HeadlineMaker.unity
+    guid: b676c78c5b9a12d49ac2f0b7a76be58c
   m_configObjects: {}

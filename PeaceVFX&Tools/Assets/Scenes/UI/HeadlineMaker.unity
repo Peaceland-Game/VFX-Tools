@@ -1174,15 +1174,15 @@ MonoBehaviour:
   - topic: 0
     notes:
     - description: You followed your parents instructions not to cross the river
-      headline: Sample headline...
+      headline: Sometimes the Older Generation Knows Best
   - topic: 1
     notes:
     - description: You returned to eavesdrop at your door
-      headline: ???
+      headline: Listen for the Truth
   - topic: 2
     notes:
     - description: You were afraid of the mob leader
-      headline: ???
+      headline: Fear of the Revolution
   - topic: 3
     notes:
     - description: You supported Waeli and Grypth when Antoni appeared
@@ -1196,13 +1196,13 @@ MonoBehaviour:
   - topic: 4
     notes:
     - description: You were weary of petting the dog
-      headline: ???
+      headline: Caution keeps you safe
   - topic: 5
     notes:
     - description: You trusted Antoni to help diffuse the situation
-      headline: ???
+      headline: Strangers Stand up for Stray Together
     - description: You believed Waeli and Antoni aren't dangerous
-      headline: ???
+      headline: Trust Leads to Better Understanding
   topicObjs:
   - {fileID: 2113310410}
   - {fileID: 982629309}
