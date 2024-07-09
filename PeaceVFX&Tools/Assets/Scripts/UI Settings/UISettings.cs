@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class UISettings : MonoBehaviour
 {
-    [SerializeField] List<Section> sections;
-
     private GameObject holdObject;
 
     private void Start()
@@ -26,12 +24,5 @@ public class UISettings : MonoBehaviour
             section.SetActive(true);
 
         holdObject = section;
-}
-
-    [System.Serializable]
-    private class Section
-    {
-        [SerializeField] string title;
-        [SerializeField] public GameObject sectionSettings;
     }
 }
