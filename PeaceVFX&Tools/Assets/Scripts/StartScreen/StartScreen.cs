@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartScreen : MonoBehaviour
 {
+    [Tooltip("This is a subsitute before we implement a save system")]
+    [SerializeField] string sceneName; 
+
     /// <summary>
     /// Continue to the most recent save file 
     /// </summary>
@@ -12,6 +16,7 @@ public class StartScreen : MonoBehaviour
         // Load using FileIO system 
 
         // Load correct scene 
+        SceneManager.LoadScene(sceneName);
     }
 
     /// <summary>
@@ -20,6 +25,7 @@ public class StartScreen : MonoBehaviour
     public void NewGame()
     {
         // Override current file 
+        SceneManager.LoadScene(sceneName);
     }
 
     /// <summary>
@@ -35,6 +41,6 @@ public class StartScreen : MonoBehaviour
     /// </summary>
     public void ExitGame()
     {
-
+        Application.Quit();
     }
 }
